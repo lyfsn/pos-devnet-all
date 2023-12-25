@@ -1,0 +1,49 @@
+version: '3.1'
+
+services:
+  web3signer-1:
+    image: consensys/web3signer:develop
+    restart: always
+    command:
+      - --http-host-allowlist=*
+      - eth2
+      - --keystores-path=/validator_keys
+      - --keystores-password-file=/password.txt
+      - --slashing-protection-enabled=false
+    ports:
+      - "49000:9000"
+    volumes:
+      - ./validator_keys:/validator_keys
+      - ./password.txt:/password.txt
+
+  web3signer-2:
+    image: consensys/web3signer:develop
+    restart: always
+    command:
+      - --http-host-allowlist=*
+      - eth2
+      - --keystores-path=/validator_keys
+      - --keystores-password-file=/password.txt
+      - --slashing-protection-enabled=false
+    ports:
+      - "49001:9000"
+    volumes:
+      - ./validator_keys:/validator_keys
+      - ./password.txt:/password.txt
+
+  web3signer-3:
+    image: consensys/web3signer:develop
+    restart: always
+    command:
+      - --http-host-allowlist=*
+      - eth2
+      - --keystores-path=/validator_keys
+      - --keystores-password-file=/password.txt
+      - --slashing-protection-enabled=false
+    ports:
+      - "49002:9000"
+    volumes:
+      - ./validator_keys:/validator_keys
+      - ./password.txt:/password.txt
+
+

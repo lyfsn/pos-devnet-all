@@ -1,0 +1,10 @@
+consensus-data
+execution-data
+validator-keys
+el-cl-genesis-data
+*.sqlite
+api-token.txt
+logs
+.secp-sk
+geth
+*.sqlite-journal
