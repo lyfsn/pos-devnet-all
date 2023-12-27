@@ -1,6 +1,6 @@
 
 
-sudo rm -rvf el-cl-genesis-data
+rm -rvf el-cl-genesis-data
 
 cp -R ../genesis-data/el-cl-genesis-data .
 
