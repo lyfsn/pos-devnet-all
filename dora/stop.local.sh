@@ -1,0 +1,2 @@
+
+docker stop dora-local

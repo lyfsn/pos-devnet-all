@@ -6,7 +6,7 @@ docker run \
   -v $(pwd)/el-cl-genesis-data:/data \
   -v $(pwd)/config-example:/config \
   --rm \
-  wangyufsn/ethereum-genesis-generator:2.0.4 all
+  lyfsn/ethereum-genesis-generator:2.0.4 all
 
 
 

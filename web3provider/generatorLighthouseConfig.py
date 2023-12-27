@@ -1,12 +1,15 @@
 import json
 import yaml
 import glob
+import os
 
 # Directory containing the JSON files
 json_dir_path = './validator_keys/'
 
 # Use glob to find the file with the pattern 'deposit_data-*.json'
 json_files = glob.glob(json_dir_path + 'deposit_data-*.json')
+
+os.system('mkdir -p lighthouse_config')
 
 if not json_files:
     print("No JSON file found with the pattern 'deposit_data-*.json'")
