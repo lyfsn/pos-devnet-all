@@ -65,8 +65,8 @@ services:
       - --p2p-static-id=true
       - --bootstrap-node=${CL_BOOTNODES}
       - --peer=${CL_STATICPEERS}
-      # - --checkpoint-sync-url=http://88.99.94.109:9781/
-      # - --genesis-beacon-api-url=http://88.99.94.109:9781/
+      - --checkpoint-sync-url=${CL_CHECKPOINT}
+      - --genesis-beacon-api-url=${CL_CHECKPOINT}
       - --historical-slasher-node=true
     volumes:
       - ./consensus-data:/consensus-data 
