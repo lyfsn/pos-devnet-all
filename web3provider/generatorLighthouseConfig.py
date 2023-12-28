@@ -22,7 +22,7 @@ else:
         data = json.load(file)
 
     # Split size
-    split_size = 256
+    split_size = 4096
 
     # Split data and write to multiple YAML files
     for i in range(0, len(data), split_size):
