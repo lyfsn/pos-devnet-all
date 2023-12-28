@@ -23,86 +23,14 @@ server_address = "0.0.0.0:8080"
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
-  url = "http://88.99.94.109:10545"
-  name = "1-deployer-geth"
+  url = "http://88.99.94.109:8545"
+  name = "1-bootnode-geth-lighthouse"
 
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
-  url = "http://88.99.94.109:10645"
-  name = "2-geth-lighthouse"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:10745"
-  name = "3-erigon-lighthouse"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:10845"
-  name = "4-erigon-lodestar"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:10945"
-  name = "5-nethermind-teku"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11045"
-  name = "6-geth-prysm"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11145"
-  name = "7-erigon-nimbus"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11245"
-  name = "8-erigon-lighthouse-newkeys"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11345"
-  name = "9-erigon-prysm"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11445"
-  name = "10-erigon-prysm-remote-key"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11545"
-  name = "11-erigon-teku"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11645"
-  name = "12-reth-lighthouse"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11745"
-  name = "13-reth-nimbus"
-
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://88.99.94.109:11845"
-  name = "14-reth-lodestar"
+  url = "http://88.99.94.109:18545"
+  name = "2-erigon-prysm"
 
 #[[clients]]
   # The 'infura' kind needs credentials
