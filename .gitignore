@@ -8,4 +8,4 @@ logs
 .secp-sk
 geth
 *.sqlite-journal
-allos.json
+allocs.json
