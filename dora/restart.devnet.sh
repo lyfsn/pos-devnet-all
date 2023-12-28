@@ -1,3 +1,0 @@
-
-
-docker restart dora-devnet

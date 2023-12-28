@@ -1,3 +1,0 @@
-
-
-docker rm dora-local
