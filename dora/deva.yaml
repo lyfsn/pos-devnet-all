@@ -36,6 +36,10 @@ beaconapi:
       name: "1-bootnode-geth-lighthouse"
       archive: true
 
+    - url: "http://88.99.94.109:4510"
+      name: "2-erigon-prysm"
+      archive: true
+
   # local cache for page models
   localCacheSize: 10 # 10MB
 
