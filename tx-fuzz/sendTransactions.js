@@ -144,7 +144,7 @@ async function main() {
      
 
       i = (i + 1) % 1000001;
-      await sleep(100);
+      await sleep(1000);
     } catch (error) {
       console.log(error);
     }
