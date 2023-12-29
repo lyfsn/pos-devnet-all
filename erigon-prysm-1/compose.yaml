@@ -89,8 +89,8 @@ services:
       - --beacon-rpc-gateway-provider=beacon:4510
       - --beacon-rpc-provider=beacon:4509
       - --datadir=/consensus-data
-      - --validators-external-signer-url=http://88.99.94.109:49000
-      - --validators-external-signer-public-keys=${VALIDATOR_KEYS}
+      - --validators-external-signer-url=https://web3signer1.archivenode.club
+      - --validators-external-signer-public-keys=http://pubkey/deposit_data-1703767932_pubkeys.json
       - --verbosity=info
       - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
       - --disable-monitoring=false
@@ -104,3 +104,9 @@ services:
     depends_on:
       - beacon
     restart: unless-stopped
+
+  pubkey:
+    image: nginx:alpine
+    volumes:
+      - ./deposit_data-1703767932_pubkeys.json:/usr/share/nginx/html/deposit_data-1703767932_pubkeys.json
+
