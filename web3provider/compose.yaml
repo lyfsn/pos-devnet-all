@@ -40,6 +40,7 @@ services:
       - --keystores-path=/validator_keys
       - --keystores-password-file=/password.txt
       - --slashing-protection-enabled=false
+      - --key-manager-api-enabled
     ports:
       - "49002:9000"
     volumes:
