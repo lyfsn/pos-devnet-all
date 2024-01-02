@@ -26,13 +26,13 @@ services:
       - --authrpc.vhosts=*
       - --authrpc.jwtsecret=/el-cl-genesis-data/jwt/jwtsecret
       - --syncmode=full
+      - --gcmode=archive
       - --rpc.allow-unprotected-txs
       - --metrics
       - --metrics.addr=0.0.0.0
       - --metrics.port=6060
       - --port=31303
       - --discovery.port=31303
-      - --gcmode=archive
       - --bootnodes=${EL_BOOTNODES}
     volumes:
       - ./execution-data:/execution-data
@@ -76,11 +76,6 @@ services:
       - --metrics-port=5054
       - --trusted-peers=${CL_TRUSTPEERS}
       - --boot-nodes=${CL_BOOTNODES}
-      - --disable-optimistic-finalized-sync
-      - --disable-backfill-rate-limiting
-      - --genesis-backfill
-      - --reconstruct-historic-states
-      - --reset-payload-statuses
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
