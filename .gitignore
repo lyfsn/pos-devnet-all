@@ -9,3 +9,5 @@ logs
 geth
 *.sqlite-journal
 allocs.json
+
+validator_keys_*

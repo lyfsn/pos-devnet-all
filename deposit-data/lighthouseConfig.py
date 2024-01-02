@@ -1,21 +1,10 @@
 import json
 import yaml
-import glob
 import os
+import sys
 
-# Directory containing the JSON files
-json_dir_path = './validator_keys/'
-
-# Use glob to find the file with the pattern 'deposit_data-*.json'
-json_files = glob.glob(json_dir_path + 'deposit_data-*.json')
-
-os.system('mkdir -p lighthouse_config')
-
-if not json_files:
-    print("No JSON file found with the pattern 'deposit_data-*.json'")
-else:
-    # Assuming you want to process the first file found
-    json_file_path = json_files[0]
+def process_json_file(json_file_path):
+    os.system('mkdir -p lighthouse_config')
 
     # Read the JSON file
     with open(json_file_path, 'r') as file:
@@ -33,7 +22,8 @@ else:
                 'enabled': True,
                 'voting_public_key': f'0x{pubkey}',
                 'type': 'web3signer',
-                'url': 'https://web3signer1.archivenode.club',
+                # 'url': 'https://web3signer1.archivenode.club',
+                'url': 'http://host.docker.internal:49000',
                 'root_certificate_path': None,
                 'request_timeout_ms': None,
                 'client_identity_path': None,
@@ -50,3 +40,15 @@ else:
         print(f'YAML file {yaml_file_path} has been created.')
 
     print(f'All YAML files have been created based on {json_file_path}.')
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <path_to_json_file>")
+        sys.exit(1)
+
+    json_file_path = sys.argv[1]
+    if not os.path.exists(json_file_path):
+        print(f"The file {json_file_path} does not exist.")
+        sys.exit(1)
+
+    process_json_file(json_file_path)
