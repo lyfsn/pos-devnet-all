@@ -24,19 +24,26 @@ server_address = "0.0.0.0:8080"
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
   url = "http://88.99.94.109:8545"
-  name = "1-bootnode-geth-lighthouse"
+  name = "bootnode-geth-lighthouse"
 
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
   url = "http://88.99.94.109:9545"
-  name = "2-geth-lighthouse"
+  name = "geth-lighthouse-1"
 
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
   url = "http://88.99.94.109:18545"
-  name = "3-erigon-prysm"
+  name = "erigon-prysm-1"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
+  url = "http://88.99.94.109:19545"
+  name = "erigon-prysm-2"
+
 
 #[[clients]]
   # The 'infura' kind needs credentials

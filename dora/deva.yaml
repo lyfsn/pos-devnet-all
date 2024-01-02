@@ -33,15 +33,19 @@ beaconapi:
   endpoints:
 
     - url: "http://88.99.94.109:5052"
-      name: "1-bootnode-geth-lighthouse"
+      name: "bootnode-geth-lighthouse"
       archive: true
 
     - url: "http://88.99.94.109:6052"
-      name: "2-geth-lighthouse"
+      name: "geth-lighthouse-1"
       archive: true
 
     - url: "http://88.99.94.109:4510"
-      name: "3-erigon-prysm"
+      name: "erigon-prysm-1"
+      archive: true
+
+    - url: "http://88.99.94.109:4610"
+      name: "erigon-prysm-2"
       archive: true
 
   # local cache for page models

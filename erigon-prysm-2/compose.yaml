@@ -68,6 +68,7 @@ services:
       - --checkpoint-sync-url=${CL_CHECKPOINT}
       - --genesis-beacon-api-url=${CL_CHECKPOINT}
       - --historical-slasher-node=true
+      - --disable-peer-scorer
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
