@@ -4,7 +4,10 @@ import os
 import sys
 
 def process_json_file(json_file_path):
-    os.system('mkdir -p lighthouse_config')
+    # Extract the base name of the file without extension for the directory name
+    base_name = os.path.splitext(os.path.basename(json_file_path))[0]
+    output_dir = f'./{base_name}_config'
+    os.makedirs(output_dir, exist_ok=True)
 
     # Read the JSON file
     with open(json_file_path, 'r') as file:
@@ -22,8 +25,7 @@ def process_json_file(json_file_path):
                 'enabled': True,
                 'voting_public_key': f'0x{pubkey}',
                 'type': 'web3signer',
-                # 'url': 'https://web3signer1.archivenode.club',
-                'url': 'http://host.docker.internal:49000',
+                'url': 'https://web3signer1.archivenode.club',
                 'root_certificate_path': None,
                 'request_timeout_ms': None,
                 'client_identity_path': None,
@@ -31,7 +33,7 @@ def process_json_file(json_file_path):
             }
             yaml_data.append(yaml_entry)
 
-        yaml_file_path = f'./lighthouse_config/validator_definitions_{i//split_size + 1}.yml'
+        yaml_file_path = os.path.join(output_dir, f'validator_definitions_{i//split_size + 1}.yml')
         with open(yaml_file_path, 'w') as file:
             file.write('---\n')
             yaml.dump(yaml_data, file, default_flow_style=False, indent=2, sort_keys=False)
