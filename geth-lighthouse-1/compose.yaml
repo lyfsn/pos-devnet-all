@@ -77,6 +77,7 @@ services:
       - --trusted-peers=${CL_TRUSTPEERS}
       - --boot-nodes=${CL_BOOTNODES}
       # - --checkpoint-sync-url=${CL_CHECKPOINT}
+      - --disable-optimistic-finalized-sync
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
