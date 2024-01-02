@@ -6,7 +6,7 @@ import sys
 def process_json_file(json_file_path):
     # Extract the base name of the file without extension for the directory name
     base_name = os.path.splitext(os.path.basename(json_file_path))[0]
-    output_dir = f'./{base_name}_config'
+    output_dir = f'./{base_name}_lighthouse'
     os.makedirs(output_dir, exist_ok=True)
 
     # Read the JSON file
