@@ -63,7 +63,7 @@ services:
       - --port=10000
       - --http
       - --http-address=0.0.0.0
-      - --http-port=6
+      - --http-port=5052
       - --http-allow-sync-stalled
       - --execution-endpoints=http://execution:8551
       - --jwt-secrets=/el-cl-genesis-data/jwt/jwtsecret
@@ -83,7 +83,7 @@ services:
       - "10000:10000/tcp"
       - "10000:10000/udp"
       - "10001:10001/udp"
-      - "6052:6"
+      - "6052:5052"
       - "6054:5054"
     depends_on:
       - execution
