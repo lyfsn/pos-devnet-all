@@ -90,31 +90,31 @@ services:
       - execution
     restart: unless-stopped
 
-  validator:
-    image: sigp/lighthouse:latest
-    command:
-      - lighthouse
-      - validator_client
-      - --debug-level=info
-      - --testnet-dir=/el-cl-genesis-data/custom_config_data
-      - --validators-dir=/validator_keys
-      - --http
-      - --http-address=0.0.0.0
-      - --http-port=5062
-      - --unencrypted-http-transport
-      - --init-slashing-protection
-      - --beacon-nodes=http://beacon:5052
-      - --suggested-fee-recipient=0x6D39C4E60dEf1DfC6d09A8FdB5D075e85F0e5F8d
-      - --metrics
-      - --metrics-address=0.0.0.0
-      - --metrics-allow-origin=*
-      - --metrics-port=5064
-    volumes:
-      - ./el-cl-genesis-data:/el-cl-genesis-data
-      - ./validator_keys:/validator_keys
-    ports:
-      - "6062:5062"
-      - "6064:5064"
-    depends_on:
-      - beacon
-    restart: unless-stopped
+  # validator:
+  #   image: sigp/lighthouse:latest
+  #   command:
+  #     - lighthouse
+  #     - validator_client
+  #     - --debug-level=info
+  #     - --testnet-dir=/el-cl-genesis-data/custom_config_data
+  #     - --validators-dir=/validator_keys
+  #     - --http
+  #     - --http-address=0.0.0.0
+  #     - --http-port=5062
+  #     - --unencrypted-http-transport
+  #     - --init-slashing-protection
+  #     - --beacon-nodes=http://beacon:5052
+  #     - --suggested-fee-recipient=0x6D39C4E60dEf1DfC6d09A8FdB5D075e85F0e5F8d
+  #     - --metrics
+  #     - --metrics-address=0.0.0.0
+  #     - --metrics-allow-origin=*
+  #     - --metrics-port=5064
+  #   volumes:
+  #     - ./el-cl-genesis-data:/el-cl-genesis-data
+  #     - ./validator_keys:/validator_keys
+  #   ports:
+  #     - "6062:5062"
+  #     - "6064:5064"
+  #   depends_on:
+  #     - beacon
+  #   restart: unless-stopped
