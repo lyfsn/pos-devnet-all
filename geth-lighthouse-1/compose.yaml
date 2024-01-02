@@ -76,6 +76,11 @@ services:
       - --metrics-port=5054
       - --trusted-peers=${CL_TRUSTPEERS}
       - --boot-nodes=${CL_BOOTNODES}
+      - --disable-optimistic-finalized-sync
+      - --disable-backfill-rate-limiting
+      - --genesis-backfill
+      - --reconstruct-historic-states
+      - --reset-payload-statuses
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
