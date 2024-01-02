@@ -103,7 +103,7 @@ services:
       - --http-port=5062
       - --unencrypted-http-transport
       - --init-slashing-protection
-      - --beacon-nodes=http://beacon:6
+      - --beacon-nodes=http://beacon:5052
       - --suggested-fee-recipient=0x6D39C4E60dEf1DfC6d09A8FdB5D075e85F0e5F8d
       - --metrics
       - --metrics-address=0.0.0.0
