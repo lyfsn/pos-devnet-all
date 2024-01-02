@@ -44,8 +44,12 @@ beaconapi:
       name: "erigon-prysm-1"
       archive: true
 
-    - url: "http://88.99.94.109:4610"
+    - url: "http://88.99.94.109:5510"
       name: "erigon-prysm-2"
+      archive: true
+
+    - url: "http://88.99.94.109:6510"
+      name: "erigon-prysm-3"
       archive: true
 
   # local cache for page models
