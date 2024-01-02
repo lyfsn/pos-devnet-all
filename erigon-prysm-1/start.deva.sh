@@ -10,8 +10,8 @@ export CL_BOOTNODES="enr:-MS4QHkPsxDZxve-pT0Wf_wNUWIGeR2XL5J1NlIxsOP7KgyvTRK1Sxw
 export CL_STATICPEERS="/ip4/0.0.0.0/tcp/9000/p2p/16Uiu2HAmNA3a2oSXUTBrZ6oFRnFRwFrCEML6iv8jtFPomZhr4n1T"
 export CL_CHECKPOINT=http://88.99.94.109:5052/
 
-export SIGNER_URL="http://host.docker.internal:49000"
-export PUBKEY_FILE="deposit_data-1704165308_64_pubkeys.json"
+export SIGNER_URL="https://web3signer1.archivenode.club"
+export PUBKEY_FILE="deposit_data-1703767932_2_pubkeys.json"
 
 
 docker compose -f compose.yaml up -d

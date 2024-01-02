@@ -10,7 +10,7 @@ export CL_BOOTNODES=""
 export CL_STATICPEERS=""
 export CL_CHECKPOINT=""
 
-export SIGNER_URL="https://web3signer1.archivenode.club"
+export SIGNER_URL="http://host.docker.internal:49000"
 export PUBKEY_FILE="deposit_data-1703767932_2_pubkeys.json"
 
 
