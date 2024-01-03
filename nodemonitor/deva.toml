@@ -44,6 +44,11 @@ server_address = "0.0.0.0:8080"
   url = "http://88.99.94.109:19545"
   name = "erigon-prysm-2"
 
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
+  url = "http://88.99.94.109:20545"
+  name = "erigon-prysm-3"
 
 #[[clients]]
   # The 'infura' kind needs credentials
