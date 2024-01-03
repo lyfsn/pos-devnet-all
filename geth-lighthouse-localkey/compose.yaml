@@ -38,12 +38,12 @@ services:
       - ./execution-data:/execution-data
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "9545:8545" 
-      - "9546:8546" 
-      - "9551:8551" 
-      - "7060:6060" 
-      - "31303:31303/tcp"
-      - "31303:31303/udp"
+      - "29545:8545" 
+      - "29546:8546" 
+      - "29551:8551" 
+      - "27060:6060" 
+      - "41303:31303/tcp"
+      - "41303:31303/udp"
     restart: unless-stopped
 
   beacon:
@@ -82,11 +82,11 @@ services:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "10000:10000/tcp"
-      - "10000:10000/udp"
-      - "10001:10001/udp"
-      - "6052:5052"
-      - "6054:5054"
+      - "20000:10000/tcp"
+      - "20000:10000/udp"
+      - "20001:10001/udp"
+      - "16052:5052"
+      - "16054:5054"
     depends_on:
       - execution
     restart: unless-stopped
@@ -116,8 +116,8 @@ services:
       - ./validator_keys:/validator_keys
       - ./validator_keys_secrets:/validator_keys_secrets
     ports:
-      - "6062:5062"
-      - "6064:5064"
+      - "16062:5062"
+      - "16064:5064"
     depends_on:
       - beacon
     restart: unless-stopped
