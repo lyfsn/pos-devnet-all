@@ -1,9 +1,7 @@
 const { ethers } = require("ethers");
-const fs = require("fs");
 const AsyncLock = require("async-lock");
 
 const nonceLock = new AsyncLock();
-
 const url = "http://88.99.94.109:8545/";
 const provider = new ethers.providers.JsonRpcProvider(url);
 
@@ -12,6 +10,8 @@ async function sleep(ms) {
 }
 
 let nonceStatus = {};
+
+// Function to get and update the nonce for a given address
 async function getAndUpdateNonce(address) {
   return nonceLock.acquire(address, async () => {
     let minFailedNonce = Number.MAX_SAFE_INTEGER;
@@ -39,25 +39,19 @@ async function getAndUpdateNonce(address) {
     }
 
     try {
-      const networkNonce = await provider.getTransactionCount(
-        address,
-        "latest"
-      );
+      const networkNonce = await provider.getTransactionCount(address, "latest");
       nonceStatus[networkNonce] = 1;
       return networkNonce;
     } catch (error) {
-      console.error("Error fetching nonce:", error);
       throw error;
     }
   });
 }
 
+// Function to send a transaction
 async function sendTransaction(sender, receiver, amountInWei) {
   const senderWallet = new ethers.Wallet(sender.privateKey, provider);
   const txNonce = await getAndUpdateNonce(sender.address);
-  const blockNumberSent = await provider.getBlockNumber();
-  const blockSent = await provider.getBlock(blockNumberSent);
-  const transactionsCountSent = blockSent.transactions.length;
 
   const tx = {
     nonce: txNonce,
@@ -67,54 +61,18 @@ async function sendTransaction(sender, receiver, amountInWei) {
   };
 
   try {
-    const txResponse = await senderWallet.sendTransaction(tx);
-    console.log(
-      "send nonce:",
-      txNonce,
-      "tx hash:",
-      txResponse.hash,
-      "amount:",
-      ethers.utils.formatEther(amountInWei),
-      "receiver:",
-      receiver.address
-    );
-    const txData = {
-      hash: txResponse.hash,
-      nonce: txNonce,
-      amount: amountInWei,
-      blockSent: blockNumberSent,
-      transCountSent: transactionsCountSent,
-    };
-
-    fs.appendFileSync(
-      "pendingTransactions.json",
-      JSON.stringify(txData) + "\n"
-    );
-
+    await senderWallet.sendTransaction(tx);
     nonceStatus[txNonce] = 1;
   } catch (error) {
     nonceStatus[txNonce] = 0;
-    if (error.message.includes("already known")) {
-    } else if (error.message.includes("replacement transaction underpriced")) {
-      console.log("replacement transaction underpriced");
-    } else if (error.message.includes("nonce too low")) {
-      nonceStatus[txNonce] = 1;
-      console.log("nonce too low", txNonce);
-    } else if (error.message.includes("replacement fee too low")) {
-      console.log("replacement fee too low");
-      nonceStatus[txNonce] = 1;
-    } else if (error.message.includes("max fee per gas less than block")) {
-      console.log("max fee per gas less than block");
-      await fetchAndUpdateFeeData();
-    } else {
-      console.log("unknown error");
-    }
+    // Handle specific errors as needed
   }
+  console.log(`Sent ${amountInWei} wei from ${sender.address} to ${receiver.address}`);
 }
 
+// Main function
 async function main() {
   let amountInWei = ethers.utils.parseEther("0.001");
-
   let i = 0;
   while (true) {
     try {
@@ -125,8 +83,7 @@ async function main() {
 
       let sender = {
         address: "0xE25583099BA105D9ec0A67f5Ae86D90e50036425",
-        privateKey:
-          "39725efee3fb28614de3bacaffe4cc4bd8c436257e2c8bb887c4b5c4be45e76d",
+        privateKey: "39725efee3fb28614de3bacaffe4cc4bd8c436257e2c8bb887c4b5c4be45e76d",
       };
 
       let wallet = ethers.Wallet.createRandom();
@@ -135,22 +92,21 @@ async function main() {
         privateKey: wallet.privateKey,
       };
 
-      let numberOfTransactions = Math.floor(Math.random() * 100) + 1;
-      numberOfTransactions = 1;
+      let numberOfTransactions = 1;
       for (let j = 0; j < numberOfTransactions; j++) {
+        await sleep(5000);
         amountInWei = amountInWei.add(1);
         limit(() => sendTransaction(sender, receiver, amountInWei));
       }
-     
 
       i = (i + 1) % 1000001;
-      await sleep(1000);
+      await sleep(5000);
     } catch (error) {
-      console.log(error);
+      // Error handling for the main function
     }
   }
 }
 
 main().catch((error) => {
-  console.error("Error in main:", error);
+  // Error handling for main function failure
 });

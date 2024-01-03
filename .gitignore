@@ -14,5 +14,4 @@ validator_keys_*
 
 node_modules
 nohup.out
-package-lock.json
 pendingTransactions.json

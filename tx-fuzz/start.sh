@@ -1,12 +1,10 @@
 #!/bin/bash
 
-if [ "$#" -lt 1 ]; then
-    echo "Usage: ./start.sh <your_command> [args...]"
-    exit 1
-fi
+# Start sendTransaction.js with Node.js
+nohup node sendTransaction.js > nohup.out 2>&1 &
 
-nohup "$@" > nohup.out 2>&1 &
-
+# Save the PID of the process
 echo $! > pid.file
 
-echo "Command started with PID $!"
+# Inform the user about the started process
+echo "sendTransaction.js started with PID $!"
