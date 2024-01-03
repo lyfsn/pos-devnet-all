@@ -35,6 +35,12 @@ server_address = "0.0.0.0:8080"
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
+  url = "http://88.99.94.109:10545"
+  name = "geth-lighthouse-2"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
   url = "http://88.99.94.109:29545"
   name = "geth-lighthouse-localkey"
 
