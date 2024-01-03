@@ -4,318 +4,382 @@
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_46_0_0-1704252938.json
+  voting_keystore_password_path: /validator_keys_secrets/0xaedc5aa500d3a5fb9278d61788752c46ed2264277047b9499d0cafcdac9bf316636086e88bb875d620460bd8c2c1a2f2
 - enabled: true
   voting_public_key: "0x894af8394424a6947f46c5d361740609371fb51ea694eb74330e9f1c4c97d063d147e289596dee70b8dbe9542e91b089"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_57_0_0-1704252945.json
+  voting_keystore_password_path: /validator_keys_secrets/0x894af8394424a6947f46c5d361740609371fb51ea694eb74330e9f1c4c97d063d147e289596dee70b8dbe9542e91b089
 - enabled: true
   voting_public_key: "0xb96400d56ae5f52e1f00ffa19be6e82d1a79ab95b4c5189c9191990a02619017a41dd41875800ebbc41c6552f6844137"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_61_0_0-1704252947.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb96400d56ae5f52e1f00ffa19be6e82d1a79ab95b4c5189c9191990a02619017a41dd41875800ebbc41c6552f6844137
 - enabled: true
   voting_public_key: "0x8b77d58fa9fc0ce9fa306aa79e6e1e94479cc9636844e4d91c0c19ce07c3b28ce7acee52ffc5fbd2572fb2aac66e0b51"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_40_0_0-1704252935.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8b77d58fa9fc0ce9fa306aa79e6e1e94479cc9636844e4d91c0c19ce07c3b28ce7acee52ffc5fbd2572fb2aac66e0b51
 - enabled: true
   voting_public_key: "0x978868e8cbe9d42ff8a4424271419c98c7ea7270bae69b05de8a615910ae8eeb5156278eb64f80db17d18c9d68baab53"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_17_0_0-1704252922.json
+  voting_keystore_password_path: /validator_keys_secrets/0x978868e8cbe9d42ff8a4424271419c98c7ea7270bae69b05de8a615910ae8eeb5156278eb64f80db17d18c9d68baab53
 - enabled: true
   voting_public_key: "0xa2cc21e4f5b23eaca5847aa738ee807e4f9999eeaaf710e5e9cabd174d883174cb12e28fd34c713f01f4f48bc4d32f39"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_8_0_0-1704252917.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa2cc21e4f5b23eaca5847aa738ee807e4f9999eeaaf710e5e9cabd174d883174cb12e28fd34c713f01f4f48bc4d32f39
 - enabled: true
   voting_public_key: "0xab0525d1775324af529136452eb34935c7f31b26ec5ef0196a97d7480c1713d540565ac84d7b2d5affb1aad7d6a5de0c"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_10_0_0-1704252919.json
+  voting_keystore_password_path: /validator_keys_secrets/0xab0525d1775324af529136452eb34935c7f31b26ec5ef0196a97d7480c1713d540565ac84d7b2d5affb1aad7d6a5de0c
 - enabled: true
   voting_public_key: "0x91842c4018395aeee6db2d4f58a5500f0649b4814dba6377e40d5ce02c8d6a00b7fe6f8418acdb3618f9ddd04a481f8a"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_62_0_0-1704252947.json
+  voting_keystore_password_path: /validator_keys_secrets/0x91842c4018395aeee6db2d4f58a5500f0649b4814dba6377e40d5ce02c8d6a00b7fe6f8418acdb3618f9ddd04a481f8a
 - enabled: true
   voting_public_key: "0xad9247bc5950eacd959eeaba50acf34b87f09ee3e53fbf293c38645153e384c3c182ace1e722e026b3face34ba364648"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_16_0_0-1704252922.json
+  voting_keystore_password_path: /validator_keys_secrets/0xad9247bc5950eacd959eeaba50acf34b87f09ee3e53fbf293c38645153e384c3c182ace1e722e026b3face34ba364648
 - enabled: true
   voting_public_key: "0x8086c71b413656297684a4ce2107cecf8d03c5589bc1475e3140031d65a08081f310b173086903f837f9f44637adbcbe"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_45_0_0-1704252938.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8086c71b413656297684a4ce2107cecf8d03c5589bc1475e3140031d65a08081f310b173086903f837f9f44637adbcbe
 - enabled: true
   voting_public_key: "0xb01de7f83702493788dd4e092393ec794fa001f0e2d7a9ea583972ae1865183d6556abedbc0de32d7af3f04aa36bdd91"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_41_0_0-1704252935.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb01de7f83702493788dd4e092393ec794fa001f0e2d7a9ea583972ae1865183d6556abedbc0de32d7af3f04aa36bdd91
 - enabled: true
   voting_public_key: "0xad5acf5425cf960875727549a29386ea2923d7aa4467ef64b05c36e822d2223c2426ba39b79eb95d7359cf0008e8979b"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_11_0_0-1704252919.json
+  voting_keystore_password_path: /validator_keys_secrets/0xad5acf5425cf960875727549a29386ea2923d7aa4467ef64b05c36e822d2223c2426ba39b79eb95d7359cf0008e8979b
 - enabled: true
   voting_public_key: "0x85fc9c152ae52508dbd5c003569d20827fb1ca099822ea90309b517a73e2c1527edc73830351cf2a6b6aa993d1776d93"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_31_0_0-1704252930.json
+  voting_keystore_password_path: /validator_keys_secrets/0x85fc9c152ae52508dbd5c003569d20827fb1ca099822ea90309b517a73e2c1527edc73830351cf2a6b6aa993d1776d93
 - enabled: true
   voting_public_key: "0x8aa81f9a0be05ee72a665bf991791563fe45a38335a75eb4fe658246264f9e8673686677aff22592ddb7ae0ec8568576"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_19_0_0-1704252924.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8aa81f9a0be05ee72a665bf991791563fe45a38335a75eb4fe658246264f9e8673686677aff22592ddb7ae0ec8568576
 - enabled: true
   voting_public_key: "0xb83e485bbe569fc96bb0269a86d93d8752c321f48da92c10de9f098e36c6f50996ff2823706f9fe0168a1cbbfe925130"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_47_0_0-1704252939.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb83e485bbe569fc96bb0269a86d93d8752c321f48da92c10de9f098e36c6f50996ff2823706f9fe0168a1cbbfe925130
 - enabled: true
   voting_public_key: "0xaff2f06366074ae64fd8e3cde6633761218a4ed6a116b9fbdc1f14503e29d186037d4e1fabae8fee4a9dbe39c756566e"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_56_0_0-1704252944.json
+  voting_keystore_password_path: /validator_keys_secrets/0xaff2f06366074ae64fd8e3cde6633761218a4ed6a116b9fbdc1f14503e29d186037d4e1fabae8fee4a9dbe39c756566e
 - enabled: true
   voting_public_key: "0xb7270dd543f25b4183261a651aa12af71f528f08c24ef3558e914a0971ddc6e69613b0f0f82351678f00821e025f8ebf"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_33_0_0-1704252931.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb7270dd543f25b4183261a651aa12af71f528f08c24ef3558e914a0971ddc6e69613b0f0f82351678f00821e025f8ebf
 - enabled: true
   voting_public_key: "0xb5947ceb520475451a67deac6d993db445ddc40044b780daec557e42be0215170d3632c65406ad975988fe2534a30351"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_32_0_0-1704252931.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb5947ceb520475451a67deac6d993db445ddc40044b780daec557e42be0215170d3632c65406ad975988fe2534a30351
 - enabled: true
   voting_public_key: "0x81073456e6af783c193b76b1f366517ad95a7e72b94dfbf21cc99515c169007e4550be4499274980125d007de3cfd223"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_60_0_0-1704252946.json
+  voting_keystore_password_path: /validator_keys_secrets/0x81073456e6af783c193b76b1f366517ad95a7e72b94dfbf21cc99515c169007e4550be4499274980125d007de3cfd223
 - enabled: true
   voting_public_key: "0x92109f029429b915e3c9870bff4e0d04222d569895ad971610ab27519b29c88ff58711bed3df5f2570833bd2e0a7401c"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_55_0_0-1704252943.json
+  voting_keystore_password_path: /validator_keys_secrets/0x92109f029429b915e3c9870bff4e0d04222d569895ad971610ab27519b29c88ff58711bed3df5f2570833bd2e0a7401c
 - enabled: true
   voting_public_key: "0x90976358d90248fff2434f6b3c27ff3f2903fff59eeb37bc4797b31efcd4c597d27f23460e9a75a5cf62e000404dc30c"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_26_0_0-1704252927.json
+  voting_keystore_password_path: /validator_keys_secrets/0x90976358d90248fff2434f6b3c27ff3f2903fff59eeb37bc4797b31efcd4c597d27f23460e9a75a5cf62e000404dc30c
 - enabled: true
   voting_public_key: "0x8a744815d0e828b937c6daba1843bd2fe66f12eff0fa61c682b128d9817ca47d7892e970c7aab08353b685d261acd2e5"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_53_0_0-1704252942.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8a744815d0e828b937c6daba1843bd2fe66f12eff0fa61c682b128d9817ca47d7892e970c7aab08353b685d261acd2e5
 - enabled: true
   voting_public_key: "0xb2a355f5b87ad6d981c784de35a5918ed74a4771ce434c34a52d414c134c2c052cddf80335627e40493db7118be1035e"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_18_0_0-1704252923.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb2a355f5b87ad6d981c784de35a5918ed74a4771ce434c34a52d414c134c2c052cddf80335627e40493db7118be1035e
 - enabled: true
   voting_public_key: "0xa3e967367987286ae062c8abfd661579c25186c2b5a4d3e3957d1cc3da93ec60d27f119e677bd5d579c7a8033ac01de0"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_6_0_0-1704252916.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa3e967367987286ae062c8abfd661579c25186c2b5a4d3e3957d1cc3da93ec60d27f119e677bd5d579c7a8033ac01de0
 - enabled: true
   voting_public_key: "0xac14316b01dc14b270429bd2a481bde3504312e4590f1f873f1e7dbe2e06317c709b81a09e3e9de08e2237df917231fb"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_54_0_0-1704252943.json
+  voting_keystore_password_path: /validator_keys_secrets/0xac14316b01dc14b270429bd2a481bde3504312e4590f1f873f1e7dbe2e06317c709b81a09e3e9de08e2237df917231fb
 - enabled: true
   voting_public_key: "0x87de1a54447ae5662ef41a26982524f37a00be7c304aacdbcd0f9838ee13fd556021ab8fa79d899cd315464eb8dbccbc"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_52_0_0-1704252942.json
+  voting_keystore_password_path: /validator_keys_secrets/0x87de1a54447ae5662ef41a26982524f37a00be7c304aacdbcd0f9838ee13fd556021ab8fa79d899cd315464eb8dbccbc
 - enabled: true
   voting_public_key: "0xa19135d0d43a925168e95ef560f057aa0716a06536ef1facd21b5308762fc48fcfb852559d4c94a6e34ae0a329fab2d1"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_5_0_0-1704252916.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa19135d0d43a925168e95ef560f057aa0716a06536ef1facd21b5308762fc48fcfb852559d4c94a6e34ae0a329fab2d1
 - enabled: true
   voting_public_key: "0x898696c4fd5982ad3432490475ffaa66e63750e2d5cbaee2b1bec58e2cc87714984d4366f84eea155463203cccec9c5c"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_23_0_0-1704252926.json
+  voting_keystore_password_path: /validator_keys_secrets/0x898696c4fd5982ad3432490475ffaa66e63750e2d5cbaee2b1bec58e2cc87714984d4366f84eea155463203cccec9c5c
 - enabled: true
   voting_public_key: "0x8c9e2bcc616f44e52c71e1b6a6c71d92dabe71eec2d47145508a74a8c423af001fd326940aca741f559ed7238da51c93"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_48_0_0-1704252939.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8c9e2bcc616f44e52c71e1b6a6c71d92dabe71eec2d47145508a74a8c423af001fd326940aca741f559ed7238da51c93
 - enabled: true
   voting_public_key: "0x945e972de5c18ab033bd7738b8ebd52703bd6fb2d85108f39fb08d4ae149982d550b6bb121562a78c9cb34d82ee7b6bf"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_25_0_0-1704252927.json
+  voting_keystore_password_path: /validator_keys_secrets/0x945e972de5c18ab033bd7738b8ebd52703bd6fb2d85108f39fb08d4ae149982d550b6bb121562a78c9cb34d82ee7b6bf
 - enabled: true
   voting_public_key: "0x94e606e262cccb25d3d776e2c46285f0f3db7395f2206f2e543a32f38a4251cc556af66b9b1540ce3bb37e6b31e09115"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_24_0_0-1704252926.json
+  voting_keystore_password_path: /validator_keys_secrets/0x94e606e262cccb25d3d776e2c46285f0f3db7395f2206f2e543a32f38a4251cc556af66b9b1540ce3bb37e6b31e09115
 - enabled: true
   voting_public_key: "0x869c45b7626ad93a0809b4351f18d5fc623cc520a95ab1bd585c3ade8ba216ffd37ede81c71fe49675bfe07dc57cf272"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_58_0_0-1704252945.json
+  voting_keystore_password_path: /validator_keys_secrets/0x869c45b7626ad93a0809b4351f18d5fc623cc520a95ab1bd585c3ade8ba216ffd37ede81c71fe49675bfe07dc57cf272
 - enabled: true
   voting_public_key: "0xa91c0c1b3f7a6f336f10d1f89e59487487bed57bd1ab22257dabf190b187a755f49c69ea12166df6049cff2eb966e0c6"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_7_0_0-1704252917.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa91c0c1b3f7a6f336f10d1f89e59487487bed57bd1ab22257dabf190b187a755f49c69ea12166df6049cff2eb966e0c6
 - enabled: true
   voting_public_key: "0x847de306fc58a26f6eb2b192a06494b0df4f2090153ce397f67f5ae76e401df7f620c69ce1683db08d12acf5db75b601"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_20_0_0-1704252924.json
+  voting_keystore_password_path: /validator_keys_secrets/0x847de306fc58a26f6eb2b192a06494b0df4f2090153ce397f67f5ae76e401df7f620c69ce1683db08d12acf5db75b601
 - enabled: true
   voting_public_key: "0x8cc5fa4cd1db1ab59dd1fda4c9328e4f9831fe07dd1f783c6ad3b787acb83d5aa8ff984b18f6f4ec36876f5d9b97d3be"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_49_0_0-1704252940.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8cc5fa4cd1db1ab59dd1fda4c9328e4f9831fe07dd1f783c6ad3b787acb83d5aa8ff984b18f6f4ec36876f5d9b97d3be
 - enabled: true
   voting_public_key: "0x897f483f8d236b25b6b73e600bb917efd06ddf4470c9c728bd5a3b71c2ffb357832a8c5e05546b1d6558de0d7a3eb8c9"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_59_0_0-1704252946.json
+  voting_keystore_password_path: /validator_keys_secrets/0x897f483f8d236b25b6b73e600bb917efd06ddf4470c9c728bd5a3b71c2ffb357832a8c5e05546b1d6558de0d7a3eb8c9
 - enabled: true
   voting_public_key: "0x8711d554cd1ccea31aa117d171c52190f32a0fd66ada3547598f0bb07cd8bc9a4b73fbe236826207e74eafa609d48a70"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_3_0_0-1704252915.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8711d554cd1ccea31aa117d171c52190f32a0fd66ada3547598f0bb07cd8bc9a4b73fbe236826207e74eafa609d48a70
 - enabled: true
   voting_public_key: "0xa7d75c150a2f71ae5f967ea9013ab65e048987fb0a2e72e64efd580d6522f1852b99e08092c8aa43dc83df84d9c86811"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_51_0_0-1704252941.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa7d75c150a2f71ae5f967ea9013ab65e048987fb0a2e72e64efd580d6522f1852b99e08092c8aa43dc83df84d9c86811
 - enabled: true
   voting_public_key: "0xa0e2149a95fed29029479d0992c89c0c6c2f73894e80fd22372c5f2297aa9e339e279a63c35ea2d33b33a3806fffe335"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_22_0_0-1704252925.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa0e2149a95fed29029479d0992c89c0c6c2f73894e80fd22372c5f2297aa9e339e279a63c35ea2d33b33a3806fffe335
 - enabled: true
   voting_public_key: "0x94eca3075742e92fe61437ce367fec1946f3a1ec0b78dea3756d4e1ecb1043d07324ee46418a5c8cd73ba6bb3576fd5b"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_2_0_0-1704252914.json
+  voting_keystore_password_path: /validator_keys_secrets/0x94eca3075742e92fe61437ce367fec1946f3a1ec0b78dea3756d4e1ecb1043d07324ee46418a5c8cd73ba6bb3576fd5b
 - enabled: true
   voting_public_key: "0x813b950efe962c388524299e92381b0bfb4d756aa0b36b479fa7cb7cbc2b172f12b1cd81fffec08d2b90566be835c126"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_50_0_0-1704252941.json
+  voting_keystore_password_path: /validator_keys_secrets/0x813b950efe962c388524299e92381b0bfb4d756aa0b36b479fa7cb7cbc2b172f12b1cd81fffec08d2b90566be835c126
 - enabled: true
   voting_public_key: "0xa83a71ed942edb91467e28062d0934745c59c02b70410b6d693e596cc9871c416d7ac051f1be95ad6498289b76bde8eb"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_27_0_0-1704252928.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa83a71ed942edb91467e28062d0934745c59c02b70410b6d693e596cc9871c416d7ac051f1be95ad6498289b76bde8eb
 - enabled: true
   voting_public_key: "0x87e7d9031c12f2220f84ce9d9543634f2dd22340ff62655107d5b8bf4d2f7c7247dc0f7a4e315cc0f9ceece499faa725"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_4_0_0-1704252915.json
+  voting_keystore_password_path: /validator_keys_secrets/0x87e7d9031c12f2220f84ce9d9543634f2dd22340ff62655107d5b8bf4d2f7c7247dc0f7a4e315cc0f9ceece499faa725
 - enabled: true
   voting_public_key: "0xac5d272bec0157f8a8555758611765a29462d5361ec3a35deb8b347835010ffe5914b3383d07ee3498ee1649f858ac27"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_1_0_0-1704252914.json
+  voting_keystore_password_path: /validator_keys_secrets/0xac5d272bec0157f8a8555758611765a29462d5361ec3a35deb8b347835010ffe5914b3383d07ee3498ee1649f858ac27
 - enabled: true
   voting_public_key: "0x80feb4b99b89620973767cb2d93973e8539d5366b9b5f2ead1695c3016a1b14da562c1a5987a3b7804e3e48ac48e2d08"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_21_0_0-1704252925.json
+  voting_keystore_password_path: /validator_keys_secrets/0x80feb4b99b89620973767cb2d93973e8539d5366b9b5f2ead1695c3016a1b14da562c1a5987a3b7804e3e48ac48e2d08
 - enabled: true
   voting_public_key: "0x8d85db78526caba199967bb0728d70bf39114f1af47c323846f0da292681b5ff20661fe44baf48ae4d1fc38a62f4dc76"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_28_0_0-1704252928.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8d85db78526caba199967bb0728d70bf39114f1af47c323846f0da292681b5ff20661fe44baf48ae4d1fc38a62f4dc76
 - enabled: true
   voting_public_key: "0x986768ca0299f121a20412bd064c5eea83fc8425064a0a9cd3a7cd582bc50e7e588749c188c38a2895bcb2aef87a6e08"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_38_0_0-1704252934.json
+  voting_keystore_password_path: /validator_keys_secrets/0x986768ca0299f121a20412bd064c5eea83fc8425064a0a9cd3a7cd582bc50e7e588749c188c38a2895bcb2aef87a6e08
 - enabled: true
   voting_public_key: "0xa6ac836922a0f4c5665d42181b94d1afe65679844746f9dde78ac1cdb511711f2625e08b87fdbfb6f2fc1ac761efd0e1"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_0_0_0-1704252913.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa6ac836922a0f4c5665d42181b94d1afe65679844746f9dde78ac1cdb511711f2625e08b87fdbfb6f2fc1ac761efd0e1
 - enabled: true
   voting_public_key: "0xa71c7058916c657a5af6a8a8b554535e34626c93e6c6aeb9320dba84a6a1947344eb4ca9e20e7490e8bfcca8469a630d"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_37_0_0-1704252933.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa71c7058916c657a5af6a8a8b554535e34626c93e6c6aeb9320dba84a6a1947344eb4ca9e20e7490e8bfcca8469a630d
 - enabled: true
   voting_public_key: "0xa3d4f0815a086a45f22d3e8db55544651e93641baac777385f1d9d48a3cfe4e4b80e5f32a733d1104df07e17ad23f901"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_39_0_0-1704252934.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa3d4f0815a086a45f22d3e8db55544651e93641baac777385f1d9d48a3cfe4e4b80e5f32a733d1104df07e17ad23f901
 - enabled: true
   voting_public_key: "0x92b69143a4071b141df9a9cfbe5ae2dc43a5b5d3c69424a1a493e39bb1fbe172053f8925f239109a094472c590b82164"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_36_0_0-1704252933.json
+  voting_keystore_password_path: /validator_keys_secrets/0x92b69143a4071b141df9a9cfbe5ae2dc43a5b5d3c69424a1a493e39bb1fbe172053f8925f239109a094472c590b82164
 - enabled: true
   voting_public_key: "0xb604c6368bcc78ec6251fe98096a1f431bf45722dbf063552890be702b3804cc3e3b26fc5800e29c084dd5a4e8120791"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_13_0_0-1704252920.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb604c6368bcc78ec6251fe98096a1f431bf45722dbf063552890be702b3804cc3e3b26fc5800e29c084dd5a4e8120791
 - enabled: true
   voting_public_key: "0x97db1bbf8b1dfed79090d3d48f7783f53b42923a9440e2e46a8133122c61412c5dbde7e09337a10594f06c88cc4e2853"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_44_0_0-1704252937.json
+  voting_keystore_password_path: /validator_keys_secrets/0x97db1bbf8b1dfed79090d3d48f7783f53b42923a9440e2e46a8133122c61412c5dbde7e09337a10594f06c88cc4e2853
 - enabled: true
   voting_public_key: "0xa65d1c5a7f2c1863800da881a069c61aa6551b42cf8dce43cc55589d05299fba724bad848595a613b84a708081071164"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_30_0_0-1704252929.json
+  voting_keystore_password_path: /validator_keys_secrets/0xa65d1c5a7f2c1863800da881a069c61aa6551b42cf8dce43cc55589d05299fba724bad848595a613b84a708081071164
 - enabled: true
   voting_public_key: "0xaac19ddbd6679874532cdc63b0f6f42895f783417355c12637ae1c6c660041203f1b08ee2b10d657ec03644b7aa4bf3f"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_29_0_0-1704252929.json
+  voting_keystore_password_path: /validator_keys_secrets/0xaac19ddbd6679874532cdc63b0f6f42895f783417355c12637ae1c6c660041203f1b08ee2b10d657ec03644b7aa4bf3f
 - enabled: true
   voting_public_key: "0xb08a6a1ef8ed528d4c256e68d1400206ac4d4bfc8743df891feb4a81c90619833ddcb92fd10e3603ff7025852ad93f21"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_15_0_0-1704252921.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb08a6a1ef8ed528d4c256e68d1400206ac4d4bfc8743df891feb4a81c90619833ddcb92fd10e3603ff7025852ad93f21
 - enabled: true
   voting_public_key: "0xac7a35e20ee69da258049f23264e5dd983b5e71f5eacd4f04e7b7655e0d30ec0883496d695222aace6a1f7f13085be85"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_34_0_0-1704252932.json
+  voting_keystore_password_path: /validator_keys_secrets/0xac7a35e20ee69da258049f23264e5dd983b5e71f5eacd4f04e7b7655e0d30ec0883496d695222aace6a1f7f13085be85
 - enabled: true
   voting_public_key: "0x8cb17e2175cedbba87f338589717191979634ff01c53f6f502f19a262a38aa89530725286feddc9552062906afc36bc8"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_42_0_0-1704252936.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8cb17e2175cedbba87f338589717191979634ff01c53f6f502f19a262a38aa89530725286feddc9552062906afc36bc8
 - enabled: true
   voting_public_key: "0xb2fcf0c077d26e591b9c4b7260fa195da3112d356ea1fd18766a7b92daadcfc63658e179929a690c3ab785ca6ab8b49e"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_12_0_0-1704252920.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb2fcf0c077d26e591b9c4b7260fa195da3112d356ea1fd18766a7b92daadcfc63658e179929a690c3ab785ca6ab8b49e
 - enabled: true
   voting_public_key: "0xb1824d2d6f9f9e09c4a959663b00a4ed3c6f70972b5e7f627fcb0eae1fa7b807cd31aafd5560bbe8442863e789dde930"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_43_0_0-1704252936.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb1824d2d6f9f9e09c4a959663b00a4ed3c6f70972b5e7f627fcb0eae1fa7b807cd31aafd5560bbe8442863e789dde930
 - enabled: true
   voting_public_key: "0x8498a8982f90ff80c328e05d0d45fdac59b0041fd0b435862d329a824b7de3c28c5de152e20dc07345a4225f38adad9e"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_63_0_0-1704252948.json
+  voting_keystore_password_path: /validator_keys_secrets/0x8498a8982f90ff80c328e05d0d45fdac59b0041fd0b435862d329a824b7de3c28c5de152e20dc07345a4225f38adad9e
 - enabled: true
   voting_public_key: "0x802158d89f919c292d6a458f98d486d59c717cb5e07e3cf1c2892cde76944013429e0de099d3a7a89e43efacf1219889"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_35_0_0-1704252932.json
+  voting_keystore_password_path: /validator_keys_secrets/0x802158d89f919c292d6a458f98d486d59c717cb5e07e3cf1c2892cde76944013429e0de099d3a7a89e43efacf1219889
 - enabled: true
   voting_public_key: "0x87ee07a2d4000fa005a1bca620a808da930ef32ffe57387d034fad0301c17843c916765f33befd55e27c09ede6514acd"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_14_0_0-1704252921.json
+  voting_keystore_password_path: /validator_keys_secrets/0x87ee07a2d4000fa005a1bca620a808da930ef32ffe57387d034fad0301c17843c916765f33befd55e27c09ede6514acd
 - enabled: true
   voting_public_key: "0xb0c9d3e0a95fa16b1bdab58c1fd85ad15190ec462ae8657ab26fa4a2f1ba8dc88c478ee640b28bf48a0175fd6fae0346"
   description: ""
   type: local_keystore
   voting_keystore_path: /validator_keys/keystore-m_12381_3600_9_0_0-1704252918.json
+  voting_keystore_password_path: /validator_keys_secrets/0xb0c9d3e0a95fa16b1bdab58c1fd85ad15190ec462ae8657ab26fa4a2f1ba8dc88c478ee640b28bf48a0175fd6fae0346

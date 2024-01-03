@@ -16,7 +16,7 @@ def create_secrets_directory(file_path):
 
 def create_secret_files(pubkeys, secrets_dir, file_name):
     for pubkey in pubkeys:
-        secret_file_name = f'{file_name}_0x{pubkey}.secret'
+        secret_file_name = f'0x{pubkey}'
         file_path = os.path.join(secrets_dir, secret_file_name)
         with open(file_path, 'w') as file:
             file.write(SECRET_CONSTANT)
