@@ -83,7 +83,7 @@ async function main() {
 
       let sender = {
         address: "0x614561D2d143621E126e87831AEF287678B442b8",
-        privateKey: "0x03bb96bbf3d64b4305d16054716071bf93a67cbfeb5bd9df5d8f24b423496c77e5",
+        privateKey: "03bb96bbf3d64b4305d16054716071bf93a67cbfeb5bd9df5d8f24b423496c77e5",
       };
 
       let wallet = ethers.Wallet.createRandom();
