@@ -32,7 +32,7 @@ beaconapi:
   # CL Client RPC
   endpoints:
 
-    - url: "http://host.docker.internal:5052"
+    - url: "http://host.docker.internal:16052"
       name: "1-bootnode-geth-lighthouse"
       archive: true
 
