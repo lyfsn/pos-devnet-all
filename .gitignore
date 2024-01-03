@@ -10,8 +10,6 @@ geth
 *.sqlite-journal
 allocs.json
 
-validator_keys_*
-
 node_modules
 nohup.out
 pendingTransactions.json
