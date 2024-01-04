@@ -5,7 +5,7 @@ services:
     image: ethereum/client-go:latest
     command:
       - --networkid=38356
-      - --state.scheme=path
+      - --state.scheme=hash
       - --verbosity=3
       - --datadir=/execution-data
       - --http
@@ -26,23 +26,24 @@ services:
       - --authrpc.vhosts=*
       - --authrpc.jwtsecret=/el-cl-genesis-data/jwt/jwtsecret
       - --syncmode=full
+      - --gcmode=archive
       - --rpc.allow-unprotected-txs
       - --metrics
       - --metrics.addr=0.0.0.0
       - --metrics.port=6060
-      - --port=31303
-      - --discovery.port=31303
+      - --port=32303
+      - --discovery.port=32303
       - --bootnodes=${EL_BOOTNODES}
     volumes:
       - ./execution-data:/execution-data
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "9545:8545" 
-      - "9546:8546" 
-      - "9551:8551" 
-      - "7060:6060" 
-      - "31303:31303/tcp"
-      - "31303:31303/udp"
+      - "10545:8545" 
+      - "10546:8546" 
+      - "10551:8551" 
+      - "8060:6060" 
+      - "32303:32303/tcp"
+      - "32303:32303/udp"
     restart: unless-stopped
 
   beacon:
@@ -53,9 +54,9 @@ services:
       - --debug-level=info
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
-      - --enr-udp-port=10000
+      - --enr-udp-port=12000
       - --listen-address=0.0.0.0
-      - --port=10000
+      - --port=12000
       - --http
       - --http-address=0.0.0.0
       - --http-port=5052
@@ -74,15 +75,18 @@ services:
       - --boot-nodes=${CL_BOOTNODES}
       - --checkpoint-sync-url=${CL_CHECKPOINT}
       - --enable-private-discovery
+      - --discovery-port=12000
+      - --enr-quic-port=12000
+      - --enr-tcp-port=12000
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "10000:10000/tcp"
-      - "10000:10000/udp"
-      - "10001:10001/udp"
-      - "6052:5052"
-      - "6054:5054"
+      - "12000:12000/tcp"
+      - "12000:12000/udp"
+      - "12001:12001/udp"
+      - "8052:5052"
+      - "8054:5054"
     depends_on:
       - execution
     restart: unless-stopped

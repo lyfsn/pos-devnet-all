@@ -54,6 +54,7 @@ services:
       - --debug-level=info
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
+      - --enr-udp-port=11000
       - --listen-address=0.0.0.0
       - --port=11000
       - --http
