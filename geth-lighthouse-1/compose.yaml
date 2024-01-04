@@ -56,7 +56,6 @@ services:
       - --listen-address=0.0.0.0
       - --port=13000
       - --enr-address=${IP_ADDRESS}
-      - --enr-udp-port=13000
       - --http
       - --http-address=0.0.0.0
       - --http-port=5052
@@ -75,6 +74,10 @@ services:
       - --boot-nodes=${CL_BOOTNODES}
       - --checkpoint-sync-url=${CL_CHECKPOINT}
       - --enable-private-discovery
+      - --discovery-port=14000
+      - --enr-udp-port=14000
+      - --enr-quic-port=14000
+      - --enr-tcp-port=14000
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
@@ -82,6 +85,8 @@ services:
       - "13000:13000/tcp"
       - "13000:13000/udp"
       - "13001:13001/udp"
+      - "14000:14000/tcp"
+      - "14000:14000/udp"
       - "9052:5052"
       - "9054:5054"
     depends_on:
