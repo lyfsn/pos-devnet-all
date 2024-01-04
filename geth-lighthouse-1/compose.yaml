@@ -54,7 +54,7 @@ services:
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
       - --listen-address=0.0.0.0
-      - --port=11000
+      - --port=10000
       - --http
       - --http-address=0.0.0.0
       - --http-port=5052
@@ -77,9 +77,9 @@ services:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "11000:11000/tcp"
-      - "11000:11000/udp"
-      - "11001:11001/udp"
+      - "10000:10000/tcp"
+      - "10000:10000/udp"
+      - "10001:10001/udp"
       - "6052:5052"
       - "6054:5054"
     depends_on:
