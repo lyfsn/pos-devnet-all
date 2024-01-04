@@ -31,19 +31,19 @@ services:
       - --metrics
       - --metrics.addr=0.0.0.0
       - --metrics.port=6060
-      - --port=32303
-      - --discovery.port=32303
+      - --port=33303
+      - --discovery.port=33303
       - --bootnodes=${EL_BOOTNODES}
     volumes:
       - ./execution-data:/execution-data
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "10545:8545" 
-      - "10546:8546" 
-      - "10551:8551" 
-      - "8060:6060" 
-      - "32303:32303/tcp"
-      - "32303:32303/udp"
+      - "11545:8545" 
+      - "11546:8546" 
+      - "11551:8551" 
+      - "9060:6060" 
+      - "33303:33303/tcp"
+      - "33303:33303/udp"
     restart: unless-stopped
 
   beacon:
