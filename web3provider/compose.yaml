@@ -7,6 +7,7 @@ services:
     command:
       - --http-host-allowlist=*
       - eth2
+      - --network=/el-cl-genesis-data/custom_config_data/config.yaml
       - --keystores-path=/validator_keys
       - --keystores-password-file=/password.txt
       - --slashing-protection-enabled=false
@@ -15,34 +16,35 @@ services:
     volumes:
       - ./validator_keys:/validator_keys
       - ./password.txt:/password.txt
+      - ./el-cl-genesis-data:/el-cl-genesis-data
 
-  web3signer-2:
-    image: consensys/web3signer:23.11.0
-    restart: always
-    command:
-      - --http-host-allowlist=*
-      - eth2
-      - --keystores-path=/validator_keys
-      - --keystores-password-file=/password.txt
-      - --slashing-protection-enabled=false
-    ports:
-      - "49001:9000"
-    volumes:
-      - ./validator_keys:/validator_keys
-      - ./password.txt:/password.txt
+  # web3signer-2:
+  #   image: consensys/web3signer:23.11.0
+  #   restart: always
+  #   command:
+  #     - --http-host-allowlist=*
+  #     - eth2
+  #     - --keystores-path=/validator_keys
+  #     - --keystores-password-file=/password.txt
+  #     - --slashing-protection-enabled=false
+  #   ports:
+  #     - "49001:9000"
+  #   volumes:
+  #     - ./validator_keys:/validator_keys
+  #     - ./password.txt:/password.txt
 
-  web3signer-3:
-    image: consensys/web3signer:23.11.0
-    restart: always
-    command:
-      - --http-host-allowlist=*
-      - eth2
-      - --keystores-path=/validator_keys
-      - --keystores-password-file=/password.txt
-      - --slashing-protection-enabled=false
-      - --key-manager-api-enabled=true
-    ports:
-      - "49002:9000"
-    volumes:
-      - ./validator_keys:/validator_keys
-      - ./password.txt:/password.txt
+  # web3signer-3:
+  #   image: consensys/web3signer:23.11.0
+  #   restart: always
+  #   command:
+  #     - --http-host-allowlist=*
+  #     - eth2
+  #     - --keystores-path=/validator_keys
+  #     - --keystores-password-file=/password.txt
+  #     - --slashing-protection-enabled=false
+  #     - --key-manager-api-enabled=true
+  #   ports:
+  #     - "49002:9000"
+  #   volumes:
+  #     - ./validator_keys:/validator_keys
+  #     - ./password.txt:/password.txt
