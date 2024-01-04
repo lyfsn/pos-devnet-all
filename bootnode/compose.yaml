@@ -52,9 +52,6 @@ services:
       - --debug-level=info
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
-      - --enr-udp-port=9000
-      - --enr-tcp-port=9000
-      - --enr-quic-port=9001
       - --listen-address=0.0.0.0
       - --port=9000
       - --http
