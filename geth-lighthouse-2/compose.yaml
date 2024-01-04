@@ -76,6 +76,7 @@ services:
       - --boot-nodes=${CL_BOOTNODES}
       - --checkpoint-sync-url=${CL_CHECKPOINT}
       - --enable-private-discovery
+      - --purge-db
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
