@@ -7,6 +7,7 @@ services:
     command:
       - --http-host-allowlist=*
       - eth2
+      - --network=/el-cl-genesis-data/custom_config_data/config.yaml
       - --keystores-path=/validator_keys
       - --keystores-password-file=/password.txt
       - --slashing-protection-enabled=false
@@ -15,6 +16,7 @@ services:
     volumes:
       - ./validator_keys:/validator_keys
       - ./password.txt:/password.txt
+      - ./el-cl-genesis-data:/el-cl-genesis-data
 
   web3signer-2:
     image: consensys/web3signer:23.11.0
@@ -22,6 +24,7 @@ services:
     command:
       - --http-host-allowlist=*
       - eth2
+      - --network=/el-cl-genesis-data/custom_config_data/config.yaml
       - --keystores-path=/validator_keys
       - --keystores-password-file=/password.txt
       - --slashing-protection-enabled=false
@@ -30,6 +33,7 @@ services:
     volumes:
       - ./validator_keys:/validator_keys
       - ./password.txt:/password.txt
+      - ./el-cl-genesis-data:/el-cl-genesis-data
 
   web3signer-3:
     image: consensys/web3signer:23.11.0
@@ -37,6 +41,7 @@ services:
     command:
       - --http-host-allowlist=*
       - eth2
+      - --network=/el-cl-genesis-data/custom_config_data/config.yaml
       - --keystores-path=/validator_keys
       - --keystores-password-file=/password.txt
       - --slashing-protection-enabled=false
@@ -46,3 +51,5 @@ services:
     volumes:
       - ./validator_keys:/validator_keys
       - ./password.txt:/password.txt
+      - ./el-cl-genesis-data:/el-cl-genesis-data
+
