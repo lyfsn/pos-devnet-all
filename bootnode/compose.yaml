@@ -49,7 +49,7 @@ services:
     command:
       - lighthouse
       - beacon_node
-      - --debug-level=debug
+      - --debug-level=info
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
       - --listen-address=0.0.0.0
@@ -70,6 +70,7 @@ services:
       - --metrics-allow-origin=*
       - --metrics-port=5054
       - --disable-peer-scoring
+      - --enable-private-discovery
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data

@@ -51,7 +51,7 @@ services:
     command:
       - lighthouse
       - beacon_node
-      - --debug-level=debug
+      - --debug-level=info
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
       - --enr-address=${IP_ADDRESS}
@@ -75,6 +75,7 @@ services:
       - --trusted-peers=${CL_TRUSTPEERS}
       - --boot-nodes=${CL_BOOTNODES}
       - --checkpoint-sync-url=${CL_CHECKPOINT}
+      - --enable-private-discovery
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
