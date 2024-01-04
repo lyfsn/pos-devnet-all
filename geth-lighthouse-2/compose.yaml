@@ -51,7 +51,7 @@ services:
     command:
       - lighthouse
       - beacon_node
-      - --debug-level=trace
+      - --debug-level=debug
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
       - --enr-address=${IP_ADDRESS}
