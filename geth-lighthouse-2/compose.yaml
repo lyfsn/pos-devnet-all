@@ -76,6 +76,10 @@ services:
       - --boot-nodes=${CL_BOOTNODES}
       - --checkpoint-sync-url=${CL_CHECKPOINT}
       - --enable-private-discovery
+      - --discovery-port=12000
+      - --enr-udp-port=12000
+      - --enr-quic-port=12000
+      - --enr-tcp-port=12000
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
@@ -83,6 +87,8 @@ services:
       - "11000:11000/tcp"
       - "11000:11000/udp"
       - "11001:11001/udp"
+      - "12000:12000/tcp"
+      - "12000:12000/udp"
       - "8052:5052"
       - "8054:5054"
     depends_on:
