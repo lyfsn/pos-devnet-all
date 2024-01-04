@@ -81,8 +81,8 @@ services:
       - "11000:11000/tcp"
       - "11000:11000/udp"
       - "11001:11001/udp"
-      - "8052:5052"
-      - "8054:5054"
+      - "6052:5052"
+      - "6054:5054"
     depends_on:
       - execution
     restart: unless-stopped
