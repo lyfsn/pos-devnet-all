@@ -54,8 +54,9 @@ services:
       - --debug-level=info
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
-      - --enr-udp-port=11000
       - --listen-address=0.0.0.0
+      - --enr-udp-port=11000
+      - --enr-quic-port=11001
       - --port=11000
       - --http
       - --http-address=0.0.0.0
@@ -81,6 +82,7 @@ services:
     ports:
       - "11000:11000/tcp"
       - "11000:11000/udp"
+      - "11001:11001/tcp"
       - "11001:11001/udp"
       - "8052:5052"
       - "8054:5054"
