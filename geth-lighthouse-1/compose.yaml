@@ -55,7 +55,7 @@ services:
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
       - --listen-address=0.0.0.0
       - --port=13000
-      - --enr-address=${IP_ADDRESS}
+      # - --enr-address=${IP_ADDRESS}
       - --enr-udp-port=13000
       - --http
       - --http-address=0.0.0.0
