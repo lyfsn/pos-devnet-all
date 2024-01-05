@@ -82,32 +82,32 @@ services:
       - execution
     restart: unless-stopped
 
-  # validator:
-  #   image: prysmaticlabs/prysm-validator:latest
-  #   command:
-  #     - --accept-terms-of-use=true
-  #     - --chain-config-file=/el-cl-genesis-data/custom_config_data/config.yaml
-  #     - --beacon-rpc-gateway-provider=beacon:4510
-  #     - --beacon-rpc-provider=beacon:4509
-  #     - --datadir=/consensus-data
-  #     - --validators-external-signer-url=${SIGNER_URL}
-  #     - --validators-external-signer-public-keys=http://pubkey/pubkeys.json
-  #     - --verbosity=info
-  #     - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
-  #     - --disable-monitoring=false
-  #     - --monitoring-host=0.0.0.0
-  #     - --monitoring-port=8081
-  #   volumes:
-  #     - ./el-cl-genesis-data:/el-cl-genesis-data
-  #     - ./consensus-data:/consensus-data
-  #   ports:
-  #     - "18081:8081"
-  #   depends_on:
-  #     - beacon
-  #   restart: unless-stopped
+  validator:
+    image: prysmaticlabs/prysm-validator:latest
+    command:
+      - --accept-terms-of-use=true
+      - --chain-config-file=/el-cl-genesis-data/custom_config_data/config.yaml
+      - --beacon-rpc-gateway-provider=beacon:4510
+      - --beacon-rpc-provider=beacon:4509
+      - --datadir=/consensus-data
+      - --validators-external-signer-url=${SIGNER_URL}
+      - --validators-external-signer-public-keys=http://pubkey/pubkeys.json
+      - --verbosity=info
+      - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
+      - --disable-monitoring=false
+      - --monitoring-host=0.0.0.0
+      - --monitoring-port=8081
+    volumes:
+      - ./el-cl-genesis-data:/el-cl-genesis-data
+      - ./consensus-data:/consensus-data
+    ports:
+      - "18081:8081"
+    depends_on:
+      - beacon
+    restart: unless-stopped
 
-  # pubkey:
-  #   image: nginx:alpine
-  #   volumes:
-  #     - ./pubkeys.json:/usr/share/nginx/html/pubkeys.json
+  pubkey:
+    image: nginx:alpine
+    volumes:
+      - ./pubkeys.json:/usr/share/nginx/html/pubkeys.json
 
