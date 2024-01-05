@@ -5,7 +5,7 @@ services:
     image: ethereum/client-go:latest
     command:
       - --networkid=38356
-      - --state.scheme=path
+      - --state.scheme=hash
       - --verbosity=3
       - --datadir=/execution-data
       - --http
@@ -26,23 +26,24 @@ services:
       - --authrpc.vhosts=*
       - --authrpc.jwtsecret=/el-cl-genesis-data/jwt/jwtsecret
       - --syncmode=full
+      - --gcmode=archive
       - --rpc.allow-unprotected-txs
       - --metrics
       - --metrics.addr=0.0.0.0
       - --metrics.port=6060
-      - --port=31303
-      - --discovery.port=31303
+      - --port=33303
+      - --discovery.port=33303
       - --bootnodes=${EL_BOOTNODES}
     volumes:
       - ./execution-data:/execution-data
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "9545:8545" 
-      - "9546:8546" 
-      - "9551:8551" 
-      - "7060:6060" 
-      - "31303:31303/tcp"
-      - "31303:31303/udp"
+      - "11545:8545" 
+      - "11546:8546" 
+      - "11551:8551" 
+      - "9060:6060" 
+      - "33303:33303/tcp"
+      - "33303:33303/udp"
     restart: unless-stopped
 
   beacon:
@@ -54,11 +55,11 @@ services:
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
       - --enr-address=${IP_ADDRESS}
-      - --enr-udp-port=10000
-      - --enr-tcp-port=10000
-      - --enr-quic-port=10001
+      - --enr-udp-port=12000
+      - --enr-tcp-port=12000
+      - --enr-quic-port=12001
       - --listen-address=0.0.0.0
-      - --port=10000
+      - --port=12000
       - --http
       - --http-address=0.0.0.0
       - --http-port=5052
@@ -80,40 +81,40 @@ services:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "10000:10000/tcp"
-      - "10000:10000/udp"
-      - "10001:10001/udp"
-      - "6052:5052"
-      - "6054:5054"
+      - "12000:12000/tcp"
+      - "12000:12000/udp"
+      - "12001:12001/udp"
+      - "9052:5052"
+      - "9054:5054"
     depends_on:
       - execution
     restart: unless-stopped
 
-  validator:
-    image: sigp/lighthouse:latest
-    command:
-      - lighthouse
-      - validator_client
-      - --debug-level=info
-      - --testnet-dir=/el-cl-genesis-data/custom_config_data
-      - --validators-dir=/validator_keys
-      - --http
-      - --http-address=0.0.0.0
-      - --http-port=5062
-      - --unencrypted-http-transport
-      - --init-slashing-protection
-      - --beacon-nodes=http://beacon:5052
-      - --suggested-fee-recipient=0x6D39C4E60dEf1DfC6d09A8FdB5D075e85F0e5F8d
-      - --metrics
-      - --metrics-address=0.0.0.0
-      - --metrics-allow-origin=*
-      - --metrics-port=5064
-    volumes:
-      - ./el-cl-genesis-data:/el-cl-genesis-data
-      - ./validator_keys:/validator_keys
-    ports:
-      - "6062:5062"
-      - "6064:5064"
-    depends_on:
-      - beacon
-    restart: unless-stopped
+  # validator:
+  #   image: sigp/lighthouse:latest
+  #   command:
+  #     - lighthouse
+  #     - validator_client
+  #     - --debug-level=info
+  #     - --testnet-dir=/el-cl-genesis-data/custom_config_data
+  #     - --validators-dir=/validator_keys
+  #     - --http
+  #     - --http-address=0.0.0.0
+  #     - --http-port=5062
+  #     - --unencrypted-http-transport
+  #     - --init-slashing-protection
+  #     - --beacon-nodes=http://beacon:5052
+  #     - --suggested-fee-recipient=0x6D39C4E60dEf1DfC6d09A8FdB5D075e85F0e5F8d
+  #     - --metrics
+  #     - --metrics-address=0.0.0.0
+  #     - --metrics-allow-origin=*
+  #     - --metrics-port=5064
+  #   volumes:
+  #     - ./el-cl-genesis-data:/el-cl-genesis-data
+  #     - ./validator_keys:/validator_keys
+  #   ports:
+  #     - "6062:5062"
+  #     - "6064:5064"
+  #   depends_on:
+  #     - beacon
+  #   restart: unless-stopped
