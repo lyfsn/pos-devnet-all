@@ -54,7 +54,6 @@ services:
       - --debug-level=info
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
-      - --disable-enr-auto-update
       - --enr-address=${IP_ADDRESS}
       - --enr-udp-port=10000
       - --enr-tcp-port=10000
