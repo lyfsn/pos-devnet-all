@@ -56,6 +56,8 @@ services:
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
       - --listen-address=0.0.0.0
       - --port=12000
+      - --enr-address=${IP_ADDRESS}
+      - --enr-udp-port=12000
       - --http
       - --http-address=0.0.0.0
       - --http-port=5052
@@ -74,7 +76,6 @@ services:
       - --boot-nodes=${CL_BOOTNODES}
       - --checkpoint-sync-url=${CL_CHECKPOINT}
       - --enable-private-discovery
-      - --purge-db
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
