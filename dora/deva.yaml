@@ -56,7 +56,7 @@ beaconapi:
       name: "erigon-prysm-1"
       archive: true
 
-    - url: "http://88.99.94.109:5510"
+    - url: "http://78.46.91.61:5510"
       name: "erigon-prysm-2"
       archive: true
 
