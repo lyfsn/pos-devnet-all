@@ -11,9 +11,9 @@ export EL_BOOTNODES="enode://c84f6b77b3cebb966213cfffacf745ca97ffcd957aa83caa228
 # export CL_CHECKPOINT=http://168.119.5.82:5052/
 
 
-# export CL_TRUSTPEERS="16Uiu2HAmRaYs4pv8ZdswYFwRGQUr6oUzQyC9c448FmSvtvxyxZBJ"
-# export CL_BOOTNODES="enr:-Ma4QOYgYhDwgyD3LZLwnzgvXGv3si67nBq3yvlTMKeptFi3KeKByVjxGsJ3ge9qEb0ILH3nzDwSJXmOya0ohm9XJJ2CAeOHYXR0bmV0c4j__________4RldGgykGeBb2lAAAAB__________-CaWSCdjSCaXCEqHcFUoRxdWljgjLJiXNlY3AyNTZrMaEDwATJ_JDjFYvMlgtX2rbkNsdZT9QSw2wuVOntXdR92A2Ic3luY25ldHMPg3RjcIIyyIN1ZHCCMsg"
-# export CL_CHECKPOINT=http://168.119.5.82:9052/
+export CL_TRUSTPEERS="16Uiu2HAmRaYs4pv8ZdswYFwRGQUr6oUzQyC9c448FmSvtvxyxZBJ"
+export CL_BOOTNODES="enr:-Ma4QOYgYhDwgyD3LZLwnzgvXGv3si67nBq3yvlTMKeptFi3KeKByVjxGsJ3ge9qEb0ILH3nzDwSJXmOya0ohm9XJJ2CAeOHYXR0bmV0c4j__________4RldGgykGeBb2lAAAAB__________-CaWSCdjSCaXCEqHcFUoRxdWljgjLJiXNlY3AyNTZrMaEDwATJ_JDjFYvMlgtX2rbkNsdZT9QSw2wuVOntXdR92A2Ic3luY25ldHMPg3RjcIIyyIN1ZHCCMsg"
+export CL_CHECKPOINT=http://168.119.5.82:9052/
 
 
 # export CL_TRUSTPEERS="16Uiu2HAmLFGnhkbLMQPGcbs7LqABkZAPG6SJBe4HdDeBUpgMPqtX"
@@ -22,9 +22,9 @@ export EL_BOOTNODES="enode://c84f6b77b3cebb966213cfffacf745ca97ffcd957aa83caa228
 
 
 
-export CL_TRUSTPEERS="16Uiu2HAm4cy7TwMcFSidQKstyd7jcwJefEbKVTac8SaeHtYNJNZJ"
-export CL_BOOTNODES="enr:-L64QNABanc6-vP-zopD3JW_32YFB9_Ge0uKrJpOMnGsZkPcej3qGKRVrUNJOCDsCrL7gYYAkcBtvBCSe-0u6jj2wT-CARSHYXR0bmV0c4j__________4RldGgykGeBb2lAAAAB__________-CaWSCdjSEcXVpY4Iu4YlzZWNwMjU2azGhAoid8ViUaqArkp0facBKaTro4q-tIR5TX1Ax61xQyxpdiHN5bmNuZXRzD4N0Y3CCLuCDdWRwgi7g"
-export CL_CHECKPOINT=http://78.46.91.61:15052/
+# export CL_TRUSTPEERS="16Uiu2HAm4cy7TwMcFSidQKstyd7jcwJefEbKVTac8SaeHtYNJNZJ"
+# export CL_BOOTNODES="enr:-L64QNABanc6-vP-zopD3JW_32YFB9_Ge0uKrJpOMnGsZkPcej3qGKRVrUNJOCDsCrL7gYYAkcBtvBCSe-0u6jj2wT-CARSHYXR0bmV0c4j__________4RldGgykGeBb2lAAAAB__________-CaWSCdjSEcXVpY4Iu4YlzZWNwMjU2azGhAoid8ViUaqArkp0facBKaTro4q-tIR5TX1Ax61xQyxpdiHN5bmNuZXRzD4N0Y3CCLuCDdWRwgi7g"
+# export CL_CHECKPOINT=http://78.46.91.61:15052/
 
 
 docker compose -f compose.yaml up -d
