@@ -108,7 +108,7 @@ services:
       - --metrics-address=0.0.0.0
       - --metrics-allow-origin=*
       - --metrics-port=5064
-      - --broadcast=subscriptions,attestations,blocks,sync-committee
+      - --broadcast subscriptions,blocks
     volumes:
       - ./el-cl-genesis-data:/el-cl-genesis-data
       - ./validator_keys:/validator_keys
