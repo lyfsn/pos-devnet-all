@@ -5,7 +5,7 @@ services:
     image: ethereum/client-go:latest
     command:
       - --networkid=38356
-      - --state.scheme=path
+      - --state.scheme=hash
       - --verbosity=3
       - --datadir=/execution-data
       - --http
