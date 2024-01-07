@@ -48,6 +48,10 @@ beaconapi:
       name: "geth-lighthouse-3"
       archive: true
 
+    - url: "http://78.46.91.61:10052"
+      name: "geth-lighthouse-4"
+      archive: true
+
     - url: "http://88.99.94.109:16052"
       name: "geth-lighthouse-locakey"
       archive: true
