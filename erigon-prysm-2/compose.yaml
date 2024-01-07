@@ -25,8 +25,8 @@ services:
       --metrics
       --metrics.addr=0.0.0.0
       --metrics.port=9001
-      --bootnodes=${EL_BOOTNODES}
-      --staticpeers=${EL_BOOTNODES}
+      # --bootnodes=${EL_BOOTNODES}
+      # --staticpeers=${EL_BOOTNODES}
     volumes:
       - ./execution-data:/execution-data
       - ./el-cl-genesis-data:/el-cl-genesis-data
