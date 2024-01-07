@@ -58,6 +58,7 @@ services:
       - --slots-per-archive-point=32
       - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
       - --subscribe-all-subnets=true
+      - --minimum-peers-per-subnet=0
       - --jwt-secret=/el-cl-genesis-data/jwt/jwtsecret
       - --disable-monitoring=false
       - --monitoring-host=0.0.0.0
@@ -65,8 +66,8 @@ services:
       - --p2p-static-id=true
       - --bootstrap-node=${CL_BOOTNODES}
       - --peer=${CL_STATICPEERS}
-      - --checkpoint-sync-url=${CL_CHECKPOINT}
-      - --genesis-beacon-api-url=${CL_CHECKPOINT}
+      # - --checkpoint-sync-url=${CL_CHECKPOINT}
+      # - --genesis-beacon-api-url=${CL_CHECKPOINT}
       - --historical-slasher-node=true
       - --disable-peer-scorer
     volumes:
