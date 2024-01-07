@@ -55,7 +55,7 @@ services:
       - --p2p-udp-port=12100
       - --p2p-static-id=true
       - --min-sync-peers=0
-      - --verbosity=info
+      - --verbosity=debug
       - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
       - --subscribe-all-subnets=true
       - --jwt-secret=/el-cl-genesis-data/jwt/jwtsecret

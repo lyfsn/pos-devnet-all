@@ -54,7 +54,7 @@ services:
       - --p2p-tcp-port=13300
       - --p2p-udp-port=12300
       - --min-sync-peers=0
-      - --verbosity=trace
+      - --verbosity=debug
       - --slots-per-archive-point=32
       - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
       - --subscribe-all-subnets=true
