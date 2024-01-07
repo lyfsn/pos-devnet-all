@@ -7,7 +7,7 @@ services:
     command:
       --log.console.verbosity=3
       --datadir=/execution-data
-      --port=30603
+      --port=30703
       --networkid=38356
       --http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin,ots
       --http.vhosts=*
@@ -31,10 +31,10 @@ services:
       - ./execution-data:/execution-data
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "20545:8545" 
-      - "20551:8551" 
-      - "21001:9001" 
-      - "30603:30603"
+      - "21545:8545" 
+      - "21551:8551" 
+      - "22001:9001" 
+      - "30703:30703"
     restart: unless-stopped
 
   beacon:
@@ -51,8 +51,8 @@ services:
       - --grpc-gateway-corsdomain=*
       - --grpc-gateway-port=4510
       - --p2p-host-ip=${IP_ADDRESS}
-      - --p2p-tcp-port=13200
-      - --p2p-udp-port=12200
+      - --p2p-tcp-port=13300
+      - --p2p-udp-port=12300
       - --min-sync-peers=0
       - --verbosity=info
       - --slots-per-archive-point=32
@@ -73,11 +73,11 @@ services:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "12200:12200/udp"
-      - "13200:13200/tcp" 
-      - "6509:4509"
-      - "6510:4510"
-      - "14200:14000"
+      - "12300:12300/udp"
+      - "13300:13300/tcp" 
+      - "8509:4509"
+      - "8510:4510"
+      - "15200:14000"
     depends_on:
       - execution
     restart: unless-stopped
