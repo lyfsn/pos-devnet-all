@@ -63,10 +63,10 @@ services:
       - --monitoring-host=0.0.0.0
       - --monitoring-port=14000
       - --p2p-static-id=true
-      - --bootstrap-node=${CL_BOOTNODES}
-      - --peer=${CL_STATICPEERS}
-      - --checkpoint-sync-url=${CL_CHECKPOINT}
-      - --genesis-beacon-api-url=${CL_CHECKPOINT}
+      # - --bootstrap-node=${CL_BOOTNODES}
+      # - --peer=${CL_STATICPEERS}
+      # - --checkpoint-sync-url=${CL_CHECKPOINT}
+      # - --genesis-beacon-api-url=${CL_CHECKPOINT}
       - --historical-slasher-node=true
       - --disable-peer-scorer
     volumes:
