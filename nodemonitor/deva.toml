@@ -71,13 +71,13 @@ server_address = "0.0.0.0:8080"
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
-  url = "http://88.99.94.109:20545"
+  url = "http://78.46.91.61:20545"
   name = "erigon-prysm-3"
 
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
-  url = "http://88.99.94.109:21545"
+  url = "http://78.46.91.61:21545"
   name = "erigon-prysm-4"
 
 #[[clients]]
