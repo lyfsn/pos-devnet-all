@@ -65,6 +65,7 @@ services:
       - --p2p-static-id=true
       - --bootstrap-node=${CL_BOOTNODES}
       - --peer=${CL_STATICPEERS}
+      - --minimum-peers-per-subnet=1
       # - --checkpoint-sync-url=${CL_CHECKPOINT}
       # - --genesis-beacon-api-url=${CL_CHECKPOINT}
       - --historical-slasher-node=true
