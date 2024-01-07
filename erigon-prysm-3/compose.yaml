@@ -69,6 +69,7 @@ services:
       # - --genesis-beacon-api-url=${CL_CHECKPOINT}
       - --historical-slasher-node=true
       - --disable-peer-scorer
+      - --minimum-peers-per-subnet=0
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
