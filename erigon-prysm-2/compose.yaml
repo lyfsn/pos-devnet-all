@@ -55,7 +55,6 @@ services:
       - --p2p-udp-port=12100
       - --min-sync-peers=0
       - --verbosity=info
-      - --slots-per-archive-point=32
       - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
       - --subscribe-all-subnets=true
       - --minimum-peers-per-subnet=0
@@ -63,12 +62,10 @@ services:
       - --disable-monitoring=false
       - --monitoring-host=0.0.0.0
       - --monitoring-port=14000
-      - --p2p-static-id=true
       - --bootstrap-node=${CL_BOOTNODES}
       - --peer=${CL_STATICPEERS}
-      # - --checkpoint-sync-url=${CL_CHECKPOINT}
-      # - --genesis-beacon-api-url=${CL_CHECKPOINT}
-      - --historical-slasher-node=true
+      - --checkpoint-sync-url=${CL_CHECKPOINT}
+      - --genesis-beacon-api-url=${CL_CHECKPOINT}
       - --disable-peer-scorer
     volumes:
       - ./consensus-data:/consensus-data 
