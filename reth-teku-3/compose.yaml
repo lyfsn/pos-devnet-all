@@ -1,0 +1,90 @@
+version: "3.8"
+
+services:
+  execution:
+    image: ghcr.io/paradigmxyz/reth:latest
+    command:
+      - node
+      - -vvv
+      - --datadir=/execution-data
+      - --chain=/el-cl-genesis-data/custom_config_data/genesis.json
+      - --addr=0.0.0.0
+      - --port=51403
+      - --discovery.port=51403
+      - --discovery.addr=0.0.0.0
+      - --http
+      - --http.port=8545
+      - --http.addr=0.0.0.0
+      - --http.corsdomain=*
+      - --http.api=admin,net,eth,web3,debug,trace
+      - --ws
+      - --ws.addr=0.0.0.0
+      - --ws.port=8546
+      - --ws.api=net,eth
+      - --ws.origins=*
+      - --nat=extip:${IP_ADDRESS}
+      - --authrpc.port=8551
+      - --authrpc.jwtsecret=/el-cl-genesis-data/jwt/jwtsecret
+      - --authrpc.addr=0.0.0.0
+      - --metrics=0.0.0.0:9001
+      - --bootnodes=${EL_BOOTNODES}
+      - --trusted-peers=${EL_BOOTNODES}
+    volumes:
+      - ./execution-data:/execution-data
+      - ./el-cl-genesis-data:/el-cl-genesis-data
+    ports:
+      - "13845:8545" 
+      - "13846:8546" 
+      - "13851:8551" 
+      - "9281:9001" 
+      - "52403:51403"
+    restart: unless-stopped
+
+  beacon:
+    image: consensys/teku:latest
+    user: "root"
+    command:
+      - --logging=INFO 
+      - --log-destination=CONSOLE 
+      - --network=/el-cl-genesis-data/custom_config_data/config.yaml 
+      - --initial-state=/el-cl-genesis-data/custom_config_data/genesis.ssz 
+      - --data-path=/opt/teku/consensus-data 
+      - --data-storage-mode=ARCHIVE 
+      - --rest-api-enabled=true 
+      - --rest-api-docs-enabled=true 
+      - --rest-api-interface=0.0.0.0 
+      - --rest-api-port=4000 
+      - --rest-api-host-allowlist=* 
+      - --data-storage-non-canonical-blocks-enabled=true 
+      - --ee-jwt-secret-file=/el-cl-genesis-data/jwt/jwtsecret 
+      - --ee-endpoint=http://execution:8551 
+      - --metrics-enabled 
+      - --metrics-interface=0.0.0.0 
+      - --metrics-host-allowlist='*' 
+      - --metrics-categories=BEACON,PROCESS,LIBP2P,JVM,NETWORK,PROCESS 
+      - --metrics-port=8008 
+      - --Xtrusted-setup=/el-cl-genesis-data/custom_config_data/trusted_setup.txt 
+      # - --validators-external-signer-public-keys=http://88.99.94.109:49100/api/v1/eth2/publicKeys
+      # - --validators-external-signer-url=http://88.99.94.109:49100
+      - --checkpoint-sync-url=${CL_CHECKPOINT}
+      - --ignore-weak-subjectivity-period-enabled 
+      - --p2p-discovery-bootnodes=${CL_BOOTNODES}
+      - --p2p-static-peers=${CL_STATICPEERS}
+      - --p2p-discovery-site-local-addresses-enabled=true
+      - --p2p-enabled=true 
+      - --p2p-subscribe-all-subnets-enabled=true 
+      - --p2p-peer-lower-bound=1 
+      - --p2p-advertised-ip=${IP_ADDRESS}
+      - --p2p-port=11400
+      - --validators-proposer-default-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
+    volumes:
+      - ./consensus-data:/consensus-data 
+      - ./el-cl-genesis-data:/el-cl-genesis-data
+    ports:
+      - "13400:11400/udp"
+      - "13400:11400/tcp" 
+      - "5700:4000"
+      - "9654:8008"
+    depends_on:
+      - execution
+    restart: unless-stopped
