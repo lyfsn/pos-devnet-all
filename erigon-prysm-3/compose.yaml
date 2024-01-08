@@ -64,8 +64,8 @@ services:
       - --monitoring-port=14000
       - --bootstrap-node=${CL_BOOTNODES}
       - --peer=${CL_STATICPEERS}
-      # - --checkpoint-sync-url=${CL_CHECKPOINT}
-      # - --genesis-beacon-api-url=${CL_CHECKPOINT}
+      - --checkpoint-sync-url=${CL_CHECKPOINT}
+      - --genesis-beacon-api-url=${CL_CHECKPOINT}
       - --disable-peer-scorer
     volumes:
       - ./consensus-data:/consensus-data 
