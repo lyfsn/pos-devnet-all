@@ -107,7 +107,7 @@ services:
       - "19081:8081"
     depends_on:
       - beacon
-      - pubkeys
+      - pubkey
     restart: unless-stopped
 
 
