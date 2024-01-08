@@ -48,6 +48,10 @@ beaconapi:
       name: "geth-lighthouse-3"
       archive: true
 
+    - url: "http://168.119.5.82:9052"
+      name: "geth-lighthouse-3 (2)"
+      archive: true
+
     - url: "http://78.46.91.61:10052"
       name: "geth-lighthouse-4"
       archive: true
@@ -68,8 +72,28 @@ beaconapi:
       name: "erigon-prysm-3"
       archive: true
 
+    - url: "http://168.119.5.82:6510"
+      name: "erigon-prysm-3 (2)"
+      archive: true
+
     - url: "http://78.46.91.61:8510"
       name: "erigon-prysm-4"
+      archive: true
+
+    - url: "http://78.46.91.61:9510"
+      name: "erigon-prysm-5"
+      archive: true
+
+    - url: "http://88.99.94.109:4600"
+      name: "reth-teku-1"
+      archive: true
+
+    - url: "http://78.46.91.61:4700"
+      name: "reth-teku-2"
+      archive: true
+
+    - url: "http://168.119.5.82:5700"
+      name: "reth-teku-3"
       archive: true
 
   # local cache for page models

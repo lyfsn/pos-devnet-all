@@ -47,6 +47,12 @@ server_address = "0.0.0.0:8080"
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
   kind="rpc"
+  url = "http://168.119.5.82:11545"
+  name = "geth-lighthouse-3 (2)"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
   url = "http://78.46.91.61:12545"
   name = "geth-lighthouse-4"
 
@@ -73,6 +79,42 @@ server_address = "0.0.0.0:8080"
   kind="rpc"
   url = "http://78.46.91.61:20545"
   name = "erigon-prysm-3"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
+  url = "http://168.119.5.82:20545"
+  name = "erigon-prysm-3 (2)"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
+  url = "http://78.46.91.61:21545"
+  name = "erigon-prysm-4"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
+  url = "http://78.46.91.61:22545"
+  name = "erigon-prysm-5"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
+  url = "http://88.99.94.109:11845"
+  name = "reth-teku-1"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
+  url = "http://78.46.91.61:12845"
+  name = "reth-teku-2"
+
+[[clients]]
+  # The 'rpc' kind is a regular rpc-node
+  kind="rpc"
+  url = "http://168.119.5.82:13845"
+  name = "reth-teku-3"
 
 [[clients]]
   # The 'rpc' kind is a regular rpc-node
