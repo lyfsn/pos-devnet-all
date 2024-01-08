@@ -116,11 +116,6 @@ server_address = "0.0.0.0:8080"
   url = "http://168.119.5.82:13845"
   name = "reth-teku-3"
 
-[[clients]]
-  # The 'rpc' kind is a regular rpc-node
-  kind="rpc"
-  url = "http://78.46.91.61:21545"
-  name = "erigon-prysm-4"
 
 #[[clients]]
   # The 'infura' kind needs credentials
