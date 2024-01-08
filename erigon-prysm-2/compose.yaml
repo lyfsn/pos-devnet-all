@@ -80,6 +80,11 @@ services:
       - execution
     restart: unless-stopped
 
+  pubkey:
+    image: nginx:alpine
+    volumes:
+      - ./pubkeys.json:/usr/share/nginx/html/pubkeys.json
+
   validator:
     image: prysmaticlabs/prysm-validator:latest
     command:
@@ -102,10 +107,8 @@ services:
       - "19081:8081"
     depends_on:
       - beacon
+      - pubkeys
     restart: unless-stopped
 
-  pubkey:
-    image: nginx:alpine
-    volumes:
-      - ./pubkeys.json:/usr/share/nginx/html/pubkeys.json
+
 

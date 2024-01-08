@@ -53,22 +53,19 @@ services:
       - --p2p-host-ip=${IP_ADDRESS}
       - --p2p-tcp-port=13200
       - --p2p-udp-port=12200
-      - --min-sync-peers=0
+      - --min-sync-peers=1
       - --verbosity=info
-      - --slots-per-archive-point=32
       - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
       - --subscribe-all-subnets=true
-      - --minimum-peers-per-subnet=0
+      - --minimum-peers-per-subnet=1
       - --jwt-secret=/el-cl-genesis-data/jwt/jwtsecret
       - --disable-monitoring=false
       - --monitoring-host=0.0.0.0
       - --monitoring-port=14000
-      - --p2p-static-id=true
       - --bootstrap-node=${CL_BOOTNODES}
       - --peer=${CL_STATICPEERS}
       # - --checkpoint-sync-url=${CL_CHECKPOINT}
       # - --genesis-beacon-api-url=${CL_CHECKPOINT}
-      - --historical-slasher-node=true
       - --disable-peer-scorer
     volumes:
       - ./consensus-data:/consensus-data 
