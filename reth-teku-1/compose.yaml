@@ -67,6 +67,7 @@ services:
       # - --validators-external-signer-public-keys=http://88.99.94.109:49100/api/v1/eth2/publicKeys
       # - --validators-external-signer-url=http://88.99.94.109:49100
       - --checkpoint-sync-url=${CL_CHECKPOINT}
+      - --ignore-weak-subjectivity-period-enabled 
       - --p2p-discovery-bootnodes=${CL_BOOTNODES}
       - --p2p-static-peers=${CL_STATICPEERS}
       - --p2p-discovery-site-local-addresses-enabled=true
