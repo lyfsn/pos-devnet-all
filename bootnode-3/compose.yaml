@@ -69,6 +69,7 @@ services:
       - --checkpoint-sync-url=${CL_CHECKPOINT}
       - --ignore-weak-subjectivity-period-enabled 
       - --p2p-discovery-bootnodes=${CL_BOOTNODES}
+      - --p2p-static-peers=${CL_STATICPEERS}
       - --p2p-discovery-site-local-addresses-enabled=true
       - --p2p-enabled=true 
       - --p2p-subscribe-all-subnets-enabled=true 
