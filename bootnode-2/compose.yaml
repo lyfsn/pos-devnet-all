@@ -1,0 +1,111 @@
+version: "3.8"
+
+services:
+  execution:
+    image: ethpandaops/erigon:2.53.0
+    user: "root"
+    command:
+      --log.console.verbosity=3
+      --datadir=/execution-data
+      --port=30303
+      --networkid=38356
+      --http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin,ots
+      --http.vhosts=*
+      --ws
+      --allow-insecure-unlock
+      --nat=extip:${IP_ADDRESS}
+      --http
+      --http.addr=0.0.0.0
+      --http.corsdomain=*
+      --http.port=8545
+      --authrpc.jwtsecret=/el-cl-genesis-data/jwt/jwtsecret
+      --authrpc.addr=0.0.0.0
+      --authrpc.port=8551
+      --authrpc.vhosts=*
+      --metrics
+      --metrics.addr=0.0.0.0
+      --metrics.port=9001
+      --bootnodes=${EL_BOOTNODES}
+      --staticpeers=${EL_BOOTNODES}
+    volumes:
+      - ./execution-data:/execution-data
+      - ./el-cl-genesis-data:/el-cl-genesis-data
+    ports:
+      - "8545:8545" 
+      - "8551:8551" 
+      - "9001:9001" 
+      - "30303:30303"
+    restart: unless-stopped
+
+  beacon:
+    image: prysmaticlabs/prysm-beacon-chain:latest
+    command:
+      - --accept-terms-of-use=true
+      - --datadir=/consensus-data
+      - --chain-config-file=/el-cl-genesis-data/custom_config_data/config.yaml
+      - --genesis-state=/el-cl-genesis-data/custom_config_data/genesis.ssz
+      - --execution-endpoint=http://execution:8551
+      - --rpc-host=0.0.0.0
+      - --rpc-port=3500
+      - --grpc-gateway-host=0.0.0.0
+      - --grpc-gateway-corsdomain=*
+      - --grpc-gateway-port=4000
+      - --p2p-host-ip=${IP_ADDRESS}
+      - --p2p-tcp-port=13000
+      - --p2p-udp-port=12000
+      - --min-sync-peers=1
+      - --verbosity=info
+      - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
+      - --subscribe-all-subnets=true
+      - --minimum-peers-per-subnet=1
+      - --jwt-secret=/el-cl-genesis-data/jwt/jwtsecret
+      - --disable-monitoring=false
+      - --monitoring-host=0.0.0.0
+      - --monitoring-port=8080
+      - --bootstrap-node=${CL_BOOTNODES}
+      - --peer=${CL_STATICPEERS}
+      - --checkpoint-sync-url=${CL_CHECKPOINT}
+      - --genesis-beacon-api-url=${CL_CHECKPOINT}
+      - --disable-peer-scorer
+    volumes:
+      - ./consensus-data:/consensus-data 
+      - ./el-cl-genesis-data:/el-cl-genesis-data
+    ports:
+      - "13000:13000/tcp"
+      - "12000:12000/udp"
+      - "3500:3500"
+      - "4000:4000"
+      - "8080:8080"
+    depends_on:
+      - execution
+    restart: unless-stopped
+
+  pubkey:
+    image: nginx:alpine
+    volumes:
+      - ./pubkeys.json:/usr/share/nginx/html/pubkeys.json
+
+  validator:
+    image: prysmaticlabs/prysm-validator:latest
+    command:
+      - --accept-terms-of-use=true
+      - --chain-config-file=/el-cl-genesis-data/custom_config_data/config.yaml
+      - --beacon-rpc-gateway-provider=beacon:4000
+      - --beacon-rpc-provider=beacon:4509
+      - --datadir=/consensus-data
+      - --validators-external-signer-url=${SIGNER_URL}
+      - --validators-external-signer-public-keys=http://pubkey/pubkeys.json
+      - --verbosity=info
+      - --suggested-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
+      - --disable-monitoring=false
+      - --monitoring-host=0.0.0.0
+      - --monitoring-port=8081
+    volumes:
+      - ./el-cl-genesis-data:/el-cl-genesis-data
+      - ./consensus-data:/consensus-data
+    ports:
+      - "8081:8081"
+    depends_on:
+      - beacon
+      - pubkey
+    restart: unless-stopped
