@@ -69,7 +69,6 @@ services:
       - --checkpoint-sync-url=${CL_CHECKPOINT}
       - --ignore-weak-subjectivity-period-enabled 
       - --p2p-discovery-bootnodes=${CL_BOOTNODES}
-      - --p2p-static-peers=${CL_STATICPEERS}
       - --p2p-discovery-site-local-addresses-enabled=true
       - --p2p-enabled=true 
       - --p2p-subscribe-all-subnets-enabled=true 
@@ -77,9 +76,11 @@ services:
       - --p2p-advertised-ip=${IP_ADDRESS}
       - --p2p-port=11400
       - --validators-proposer-default-fee-recipient=0x8943545177806ED17B9F23F0a21ee5948eCaa776
+      - --p2p-private-key-file=/private.key
     volumes:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
+      - ./private.key:/private.key
     ports:
       - "11400:11400/udp"
       - "11400:11400/tcp" 

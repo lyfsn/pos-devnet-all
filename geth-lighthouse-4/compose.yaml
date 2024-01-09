@@ -54,11 +54,11 @@ services:
       - --datadir=/consensus-data
       - --testnet-dir=/el-cl-genesis-data/custom_config_data
       # - --enr-address=${IP_ADDRESS}
-      - --enr-udp-port=13000
-      - --enr-tcp-port=13000
-      - --enr-quic-port=13001
+      - --enr-udp-port=15000
+      - --enr-tcp-port=15000
+      - --enr-quic-port=15001
       - --listen-address=0.0.0.0
-      - --port=13000
+      - --port=15000
       - --http
       - --http-address=0.0.0.0
       - --http-port=5052
@@ -80,9 +80,9 @@ services:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "13000:13000/tcp"
-      - "13000:13000/udp"
-      - "13001:13001/udp"
+      - "15000:15000/tcp"
+      - "15000:15000/udp"
+      - "15001:15001/udp"
       - "10052:5052"
       - "10054:5054"
     depends_on:
