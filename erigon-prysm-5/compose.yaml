@@ -51,8 +51,8 @@ services:
       - --grpc-gateway-corsdomain=*
       - --grpc-gateway-port=4510
       - --p2p-host-ip=${IP_ADDRESS}
-      - --p2p-tcp-port=13400
-      - --p2p-udp-port=12400
+      - --p2p-tcp-port=13410
+      - --p2p-udp-port=12410
       - --min-sync-peers=0
       - --verbosity=info
       - --slots-per-archive-point=32
@@ -73,8 +73,8 @@ services:
       - ./consensus-data:/consensus-data 
       - ./el-cl-genesis-data:/el-cl-genesis-data
     ports:
-      - "12400:12400/udp"
-      - "13400:13400/tcp" 
+      - "12410:12410/udp"
+      - "13410:13410/tcp" 
       - "9509:4509"
       - "9510:4510"
       - "16200:14000"
